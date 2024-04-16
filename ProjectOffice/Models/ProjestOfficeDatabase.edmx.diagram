@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e402be3b5f034a29a3677969d131427d" Name="Diagram1">
+        <EntityTypeShape EntityType="ProgectOfficeDatabaseModel.Employe" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProgectOfficeDatabaseModel.LastStatus" Width="1.5" PointX="3" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProgectOfficeDatabaseModel.Portfile" Width="1.5" PointX="3.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProgectOfficeDatabaseModel.Position" Width="1.5" PointX="1.5" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProgectOfficeDatabaseModel.Project" Width="1.5" PointX="6" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProgectOfficeDatabaseModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProgectOfficeDatabaseModel.Task" Width="1.5" PointX="6" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProgectOfficeDatabaseModel.TaskStatus" Width="1.5" PointX="0.75" PointY="6.125" IsExpanded="true" />
+        <AssociationConnector Association="ProgectOfficeDatabaseModel.FK_Employe_Position" ManuallyRouted="false" />
+        <AssociationConnector Association="ProgectOfficeDatabaseModel.FK_Project_Employe" ManuallyRouted="false" />
+        <AssociationConnector Association="ProgectOfficeDatabaseModel.FK_Project_Employe1" ManuallyRouted="false" />
+        <AssociationConnector Association="ProgectOfficeDatabaseModel.FK_Task_Employe" ManuallyRouted="false" />
+        <AssociationConnector Association="ProgectOfficeDatabaseModel.FK_Task_Employe1" ManuallyRouted="false" />
+        <AssociationConnector Association="ProgectOfficeDatabaseModel.FK_Task_Employe2" ManuallyRouted="false" />
+        <AssociationConnector Association="ProgectOfficeDatabaseModel.FK_LastStatus_Task" ManuallyRouted="false" />
+        <AssociationConnector Association="ProgectOfficeDatabaseModel.FK_LastStatus_TaskStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="ProgectOfficeDatabaseModel.FK_Task_Portfile" ManuallyRouted="false" />
+        <AssociationConnector Association="ProgectOfficeDatabaseModel.FK_Task_TaskStatus" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

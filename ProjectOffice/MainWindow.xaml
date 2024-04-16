@@ -1,0 +1,36 @@
+﻿<Window x:Class="ProjectOffice.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectOffice"
+        mc:Ignorable="d"
+        Title="MainWindow" MinHeight="450" MinWidth="800" Height="450" Width="800">
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel Width="50" Background="Blue">
+                <Image Source="Imports\app_icon.png" Margin="0,10,0,10" Width="30"></Image>
+                <Button Width="25" Height="25" Margin="0,0,0,4" Background="Blue" Name="DashBtn" Click="DashBtn_Click">
+                    <Image Source="Imports\app_dasboard_icon.png"></Image>
+                </Button>
+                <Button Width="25" Height="25" Margin="0,0,0,4" Background="Blue" Name="TaskBtn" Click="TaskBtn_Click"> 
+                    <Image Source="Imports\app_tasks_icon.png"></Image>
+                </Button>
+                <Button Width="25" Height="25" Margin="0,0,0,4" Background="Blue" Name="CalBtn" Click="CalBtn_Click">
+                    <Image Source="Imports\app_cal_icon.png"></Image>
+                </Button>
+                <ListView Name="ListProjects" Height="250" Background="Blue" Width="70">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Button Width="25" Height="25" Margin="0,0,0,4" Background="{Binding BackgroundColor}" Foreground="{Binding ForengroundColor}" Name="ProjectBtn" Click="ProjectBtn_Click">
+                                <TextBlock Text="{Binding ShortName}"></TextBlock>
+                            </Button>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <TextBlock Text="1.4.2345" FontSize="9" Margin="0,0,0,10" Foreground="White"></TextBlock>
+            </StackPanel>
+            <Frame x:Name="MyFrame" NavigationUIVisibility="Hidden"></Frame>
+        </StackPanel>
+    </Grid>
+</Window>
