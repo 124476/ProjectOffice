@@ -64,6 +64,22 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Models\DocumentFile.cs">
+      <DependentUpon>ProjestOfficeDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Partials\Employe.cs" />
+    <Compile Include="Models\Wather.cs">
+      <DependentUpon>ProjestOfficeDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\OknoDelete.xaml.cs">
+      <DependentUpon>OknoDelete.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\OknoNewTask.xaml.cs">
+      <DependentUpon>OknoNewTask.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\OknoOneTask.xaml.cs">
+      <DependentUpon>OknoOneTask.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -85,6 +101,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\OknoTask.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\OknoDelete.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\OknoNewTask.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\OknoOneTask.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -178,6 +206,7 @@
     <Resource Include="Imports\app_cal_icon.png" />
     <Resource Include="Imports\app_dasboard_icon.png" />
     <Resource Include="Imports\app_tasks_icon.png" />
+    <Resource Include="Imports\app_plus_icon.png" />
     <Content Include="Models\ProjestOfficeDatabase.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ProjestOfficeDatabase.Context.cs</LastGenOutput>

@@ -1,8 +1,9 @@
-﻿using System;
+﻿using ProjectOffice.Models;
+using ProjectOffice.Windows;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -23,17 +24,54 @@ namespace ProjectOffice.Pages
         public OknoTask()
         {
             InitializeComponent();
-            ListTasks.ItemsSource = App.DB.Task.Where(x => x.ProjectId == App.project.Id).OrderBy(x => x.StatusId + x.FinishActualTime.ToString()).ToList();
+            Refresh();
         }
 
         private void PoiskText_TextChanged(object sender, TextChangedEventArgs e)
         {
-            Refrash();
+            Refresh();
         }
 
-        private void Refrash()
+        private void Refresh()
         {
-            ListTasks.ItemsSource = App.DB.Task.Where(x => x.ProjectId == App.project.Id).Where(x => x.Name.Contains(PoiskText.Text) || x.Descriprion.Contains(PoiskText.Text)).OrderBy(x => x.StatusId + x.FinishActualTime.ToString()).ToList();
+            var searchText = PoiskText.Text;
+            var filtred = App.DB.Task.Where(x => x.ProjectId == App.project.Id).ToList();
+
+            if (string.IsNullOrWhiteSpace(searchText) != true)
+                filtred = filtred.Where(x => x.Name.Contains(PoiskText.Text) || x.Descriprion.Contains(PoiskText.Text)).ToList();
+            
+            filtred = filtred.Where(x => x.StatusId != 5).ToList();
+
+            filtred = filtred.OrderByDescending(x => x.StatusId == 3 && x.DateEnd?.Date < DateTime.Now.Date)
+                             .ThenByDescending(x => x.StatusId == 2 && x.DateEnd?.Date < DateTime.Now.Date)
+                             .ThenByDescending(x => x.StatusId == 3)
+                             .ThenByDescending(x => x.StatusId == 2).ToList();
+
+            ListTasks.ItemsSource = filtred;
+        }
+
+        private void ListTasks_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            Models.Task task = ListTasks.SelectedItem as Models.Task;
+            if (task != null)
+            {
+                var dialog = new OknoOneTask(task);
+                dialog.ShowDialog();
+                if (dialog.DialogResult == true)
+                {
+                    Refresh();
+                }
+            }
+        }
+
+        private void Add_Click(object sender, RoutedEventArgs e)
+        {
+            var dialog = new OknoNewTask();
+            dialog.ShowDialog();
+            if (dialog.DialogResult == true)
+            {
+                Refresh();
+            }
         }
     }
 }

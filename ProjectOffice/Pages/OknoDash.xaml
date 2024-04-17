@@ -9,6 +9,6 @@
       Title="OknoDash">
 
     <Grid>
-        
+        <TextBlock FontSize="27" Text="Разработка" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock> 
     </Grid>
 </Page>

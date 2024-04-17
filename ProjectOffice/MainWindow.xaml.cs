@@ -1,8 +1,10 @@
 ﻿using ProjectOffice.Models;
 using ProjectOffice.Pages;
+using ProjectOffice.Properties;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -25,7 +27,15 @@ namespace ProjectOffice
         public MainWindow()
         {
             InitializeComponent();
-            App.project = App.DB.Project.FirstOrDefault();
+            if (Settings.Default.ProjectId == 0)
+                App.project = App.DB.Project.FirstOrDefault();
+            else
+                App.project = App.DB.Project.FirstOrDefault(x => x.Id == Settings.Default.ProjectId);
+
+
+            var version = Assembly.GetExecutingAssembly().GetName().Version;
+            VersionText.Text = version.ToString();
+
             MyFrame.Navigate(new OknoTask());
             ListProjects.ItemsSource = App.DB.Project.ToList();
         }
@@ -49,6 +59,10 @@ namespace ProjectOffice
         {
             Project project = (sender as Button).DataContext as Project;
             App.project = project;
+            
+            Settings.Default.ProjectId = App.project.Id;
+            Settings.Default.Save();
+
             ListProjects.ItemsSource = App.DB.Project.ToList();
         }
     }

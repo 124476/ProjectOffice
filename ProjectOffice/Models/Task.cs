@@ -17,7 +17,9 @@ namespace ProjectOffice.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Task()
         {
+            this.DocumentFile = new HashSet<DocumentFile>();
             this.LastStatus = new HashSet<LastStatus>();
+            this.Wather = new HashSet<Wather>();
         }
     
         public int Id { get; set; }
@@ -27,7 +29,6 @@ namespace ProjectOffice.Models
         public string Descriprion { get; set; }
         public Nullable<int> PostanovchikId { get; set; }
         public Nullable<int> IspolnitelId { get; set; }
-        public Nullable<int> WatcherId { get; set; }
         public Nullable<int> StatusId { get; set; }
         public Nullable<System.DateTime> CreatedTime { get; set; }
         public Nullable<System.DateTime> UpdatedTime { get; set; }
@@ -39,12 +40,15 @@ namespace ProjectOffice.Models
         public Nullable<System.DateTime> DateEnd { get; set; }
         public Nullable<int> PortfileId { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DocumentFile> DocumentFile { get; set; }
         public virtual Employe Employe { get; set; }
-        public virtual Employe Employe1 { get; set; }
-        public virtual Employe Employe2 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<LastStatus> LastStatus { get; set; }
         public virtual Portfile Portfile { get; set; }
+        public virtual Project Project { get; set; }
         public virtual TaskStatus TaskStatus { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Wather> Wather { get; set; }
     }
 }

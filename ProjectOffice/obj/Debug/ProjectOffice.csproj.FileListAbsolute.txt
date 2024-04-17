@@ -26,3 +26,9 @@ C:\Users\Stipo6\source\repos\ProjectOffice\ProjectOffice\obj\Debug\Pages\OknoTas
 C:\Users\Stipo6\source\repos\ProjectOffice\ProjectOffice\obj\Debug\Pages\OknoCal.baml
 C:\Users\Stipo6\source\repos\ProjectOffice\ProjectOffice\obj\Debug\Pages\OknoDash.baml
 C:\Users\Stipo6\source\repos\ProjectOffice\ProjectOffice\obj\Debug\Pages\OknoTask.baml
+C:\Users\Stipo6\source\repos\ProjectOffice\ProjectOffice\obj\Debug\Windows\OknoOneTask.g.cs
+C:\Users\Stipo6\source\repos\ProjectOffice\ProjectOffice\obj\Debug\Windows\OknoOneTask.baml
+C:\Users\Stipo6\source\repos\ProjectOffice\ProjectOffice\obj\Debug\Windows\OknoDelete.g.cs
+C:\Users\Stipo6\source\repos\ProjectOffice\ProjectOffice\obj\Debug\Windows\OknoDelete.baml
+C:\Users\Stipo6\source\repos\ProjectOffice\ProjectOffice\obj\Debug\Windows\OknoNewTask.g.cs
+C:\Users\Stipo6\source\repos\ProjectOffice\ProjectOffice\obj\Debug\Windows\OknoNewTask.baml

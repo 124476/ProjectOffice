@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" MinHeight="450" MinWidth="800" Height="450" Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
         <StackPanel Orientation="Horizontal">
             <StackPanel Width="50" Background="Blue">
                 <Image Source="Imports\app_icon.png" Margin="0,10,0,10" Width="30"></Image>
@@ -28,9 +32,9 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-                <TextBlock Text="1.4.2345" FontSize="9" Margin="0,0,0,10" Foreground="White"></TextBlock>
+                <TextBlock Name="VersionText" FontSize="9" Margin="0,0,0,10" Foreground="White"></TextBlock>
             </StackPanel>
-            <Frame x:Name="MyFrame" NavigationUIVisibility="Hidden"></Frame>
         </StackPanel>
+            <Frame x:Name="MyFrame" Grid.Column="1" NavigationUIVisibility="Hidden"></Frame>
     </Grid>
 </Window>

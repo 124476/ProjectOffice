@@ -1,0 +1,57 @@
+﻿<Window x:Class="ProjectOffice.Windows.OknoOneTask"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectOffice.Windows"
+        mc:Ignorable="d"
+        Title="OknoOneTask" Height="450" Width="800" MinHeight="450" MinWidth="800">
+    <Grid>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{Binding ShortTitle}" FontSize="17" Margin="0,0,10,0"></TextBlock>
+                <TextBlock Text="{Binding Name}" FontSize="17" Margin="0,0,10,0"></TextBlock>
+                <StackPanel Background="{Binding TaskStatus.Color}">
+                    <TextBlock Text="{Binding TaskStatus.Name}" Width="54" FontSize="13" Margin="10,0,10,0"></TextBlock>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Создание задачи:" Margin="0,0,10,0" FontSize="17"></TextBlock>
+                <TextBlock Text="{Binding CreatedTime, StringFormat='dd/MM/yyyy mm:hh'}" FontSize="17"></TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Дедлайн:" Margin="0,0,10,0" FontSize="17"></TextBlock>
+                <TextBlock Text="{Binding FinishActualTime, StringFormat='dd/MM/yyyy mm:hh'}" FontSize="17"></TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Предшествующая задача:" Margin="0,0,10,0" FontSize="17"></TextBlock>
+                <TextBlock Text="{Binding LastTask}" FontSize="17"></TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Фактическое начало выполнения:" Margin="0,0,10,0" FontSize="17"></TextBlock>
+                <TextBlock Text="{Binding DateStart, StringFormat='dd/MM/yyyy mm:hh'}" FontSize="17"></TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Фактическое завершение:" Margin="0,0,10,0" FontSize="17"></TextBlock>
+                <TextBlock Text="{Binding DateEnd, StringFormat='dd/MM/yyyy mm:hh'}" FontSize="17"></TextBlock>
+            </StackPanel>
+            <TextBlock Text="Описание:" Margin="0,0,10,0" FontSize="17"></TextBlock>
+            <TextBox Text="{Binding Descriprion}" FontSize="17"></TextBox>
+            <TextBlock Text="Исполнитель:" Margin="0,0,10,0" FontSize="17"></TextBlock>
+            <ComboBox Name="ComboIsplos" FontSize="17" DisplayMemberPath="FullName"></ComboBox>
+            <TextBlock Text="Наблюдатели:" Margin="0,0,10,0" FontSize="17"></TextBlock>
+            <ListView x:Name="ListWathers">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding FullName}" FontSize="17"></TextBlock>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <ComboBox Name="ComboWathes" SelectedItem="{Binding Watch}" FontSize="17" DisplayMemberPath="FullName" SelectionChanged="ComboWathes_SelectionChanged"></ComboBox>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="Save" FontSize="17" Content="Сохранить" Background="Blue" Foreground="White" Width="200" Margin="10,10,10,0" Click="Save_Click"></Button>
+                <Button x:Name="Del" FontSize="17" Content="Удалить" Background="White" Foreground="Red" Width="200" Margin="0,10,0,0" Click="Del_Click"></Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

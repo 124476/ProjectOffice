@@ -20,8 +20,7 @@ namespace ProjectOffice.Models
             this.Project = new HashSet<Project>();
             this.Project1 = new HashSet<Project>();
             this.Task = new HashSet<Task>();
-            this.Task1 = new HashSet<Task>();
-            this.Task2 = new HashSet<Task>();
+            this.Wather = new HashSet<Wather>();
         }
     
         public int Id { get; set; }
@@ -45,8 +44,6 @@ namespace ProjectOffice.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Task> Task { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Task> Task1 { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Task> Task2 { get; set; }
+        public virtual ICollection<Wather> Wather { get; set; }
     }
 }

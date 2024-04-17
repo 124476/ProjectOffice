@@ -25,6 +25,7 @@ namespace ProjectOffice.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<DocumentFile> DocumentFile { get; set; }
         public virtual DbSet<Employe> Employe { get; set; }
         public virtual DbSet<LastStatus> LastStatus { get; set; }
         public virtual DbSet<Portfile> Portfile { get; set; }
@@ -33,5 +34,6 @@ namespace ProjectOffice.Models
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Task> Task { get; set; }
         public virtual DbSet<TaskStatus> TaskStatus { get; set; }
+        public virtual DbSet<Wather> Wather { get; set; }
     }
 }
