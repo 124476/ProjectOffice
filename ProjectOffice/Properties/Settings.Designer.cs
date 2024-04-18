@@ -34,5 +34,41 @@ namespace ProjectOffice.Properties {
                 this["ProjectId"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("2017-02-15")]
+        public global::System.DateTime DateStart {
+            get {
+                return ((global::System.DateTime)(this["DateStart"]));
+            }
+            set {
+                this["DateStart"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public int dateDelta {
+            get {
+                return ((int)(this["dateDelta"]));
+            }
+            set {
+                this["dateDelta"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("5")]
+        public int delta {
+            get {
+                return ((int)(this["delta"]));
+            }
+            set {
+                this["delta"] = value;
+            }
+        }
     }
 }

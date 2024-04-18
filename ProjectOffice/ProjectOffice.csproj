@@ -74,6 +74,9 @@
     <Compile Include="Windows\OknoDelete.xaml.cs">
       <DependentUpon>OknoDelete.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\OknoInfoTask.xaml.cs">
+      <DependentUpon>OknoInfoTask.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\OknoNewTask.xaml.cs">
       <DependentUpon>OknoNewTask.xaml</DependentUpon>
     </Compile>
@@ -105,6 +108,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\OknoDelete.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\OknoInfoTask.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

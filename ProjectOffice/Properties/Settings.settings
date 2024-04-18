@@ -5,5 +5,14 @@
     <Setting Name="ProjectId" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
+    <Setting Name="DateStart" Type="System.DateTime" Scope="User">
+      <Value Profile="(Default)">2017-02-15</Value>
+    </Setting>
+    <Setting Name="dateDelta" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="delta" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

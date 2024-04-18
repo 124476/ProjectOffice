@@ -32,3 +32,5 @@ C:\Users\Stipo6\source\repos\ProjectOffice\ProjectOffice\obj\Debug\Windows\OknoD
 C:\Users\Stipo6\source\repos\ProjectOffice\ProjectOffice\obj\Debug\Windows\OknoDelete.baml
 C:\Users\Stipo6\source\repos\ProjectOffice\ProjectOffice\obj\Debug\Windows\OknoNewTask.g.cs
 C:\Users\Stipo6\source\repos\ProjectOffice\ProjectOffice\obj\Debug\Windows\OknoNewTask.baml
+C:\Users\Stipo6\source\repos\ProjectOffice\ProjectOffice\obj\Debug\Windows\OknoInfoTask.g.cs
+C:\Users\Stipo6\source\repos\ProjectOffice\ProjectOffice\obj\Debug\Windows\OknoInfoTask.baml
