@@ -22,138 +22,49 @@ namespace ProjectOffice.Windows
         public OknoInfoTask(Models.Task task)
         {
             InitializeComponent();
-            DateTime dateTime = DateTime.Parse((task.DateEnd.Value - task.DateStart.Value).ToString());
-            DateTime dateNew = DateTime.Parse("00-00-00");
+            TimeSpan allTime = task.DateEnd.Value - task.DateStart.Value;
+            TimeSpan dateNew;
 
-            if (dateTime.Year != 0)
+            if (allTime.Days > 0)
             {
-                if (dateTime.Month != 0)
+                dateNew = TimeSpan.FromDays(allTime.Days);
+                dateNew += TimeSpan.FromHours(allTime.Hours);
+                if (allTime.Minutes >= 30)
                 {
-                    if (dateTime.Month > 6)
-                    {
-                        dateNew = dateNew.AddYears(dateTime.Year + 1);
-                    }
-                    else
-                    {
-                        dateNew = dateNew.AddYears(dateTime.Year);
-                    }
-                }
-                else
-                {
-                    dateNew = dateNew.AddYears(dateTime.Year);
+                    dateNew += TimeSpan.FromHours(1);
                 }
             }
             else
             {
-                if (dateTime.Month != 0)
+                if (allTime.Hours > 0)
                 {
-                    if (dateTime.Day != 0)
+                    dateNew = TimeSpan.FromHours(allTime.Hours);
+                    dateNew += TimeSpan.FromMinutes(allTime.Minutes);
+                    if (allTime.Seconds >= 30)
                     {
-                        if (dateTime.Day > 15)
-                        {
-                            dateNew = dateNew.AddMonths(dateTime.Month + 1);
-                        }
-                        else
-                        {
-                            dateNew = dateNew.AddMonths(dateTime.Month);
-                        }
-                    }
-                    else
-                    {
-                        dateNew = dateNew.AddMonths(dateTime.Month);
+                        dateNew += TimeSpan.FromMinutes(1);
                     }
                 }
                 else
                 {
-                    if (dateTime.Day != 0)
-                    {
-                        if (dateTime.Hour != 0)
-                        {
-                            if (dateTime.Hour > 12)
-                            {
-                                dateNew = dateNew.AddDays(dateTime.Hour + 1);
-                            }
-                            else
-                            {
-                                dateNew = dateNew.AddDays(dateTime.Hour);
-                            }
-                        }
-                        else
-                        {
-                            dateNew = dateNew.AddDays(dateTime.Hour);
-                        }
-                    }
-                    else
-                    {
-                        if (dateTime.Hour != 0)
-                        {
-                            if (dateTime.Minute != 0)
-                            {
-                                if (dateTime.Minute > 30)
-                                {
-                                    dateNew = dateNew.AddHours(dateTime.Minute + 1);
-                                }
-                                else
-                                {
-                                    dateNew = dateNew.AddHours(dateTime.Minute);
-                                }
-                            }
-                            else
-                            {
-                                dateNew = dateNew.AddHours(dateTime.Minute);
-                            }
-                        }
-                        else
-                        {
-                            if (dateTime.Minute != 0)
-                            {
-                                if (dateTime.Second != 0)
-                                {
-                                    if (dateTime.Second > 30)
-                                    {
-                                        dateNew = dateNew.AddHours(dateTime.Second + 1);
-                                    }
-                                    else
-                                    {
-                                        dateNew = dateNew.AddHours(dateTime.Second);
-                                    }
-                                }
-                                else
-                                {
-                                    dateNew = dateNew.AddHours(dateTime.Second);
-                                }
-                            }
-                        }
-                    }
+                    dateNew = TimeSpan.FromMinutes(allTime.Minutes);
+                    dateNew += TimeSpan.FromSeconds(allTime.Seconds);
                 }
             }
-            string dateNewText = "";
-            if (dateNew.Year != 0)
-            {
-                dateNewText = dateNew.Year.ToString() + " " + "years";
-            }
-            if (dateNew.Month != 0)
-            {
-                dateNewText += dateNew.Month.ToString() + " " + "months";
-            }
-            if (dateNew.Day != 0)
-            {
-                dateNewText += dateNew.Day.ToString() + " " + "days";
-            }
-            if (dateNew.Hour != 0)
-            {
-                dateNewText += dateNew.Hour.ToString() + " " + "hours";
-            }
-            if (dateNew.Minute != 0)
-            {
-                dateNewText += dateNew.Minute.ToString() + " " + "minutes";
-            }
-            if (dateNew.Second != 0)
-            {
-                dateNewText += dateNew.Second.ToString() + " " + "seconds";
-            }
 
-            InfoText.Text = dateNewText;
+            string allTimeString = "";
+
+            if (dateNew.Days != 0)
+                allTimeString += dateNew.Days.ToString() + " days ";
+            if (dateNew.Hours != 0)
+                allTimeString += dateNew.Hours.ToString() + " hours ";
+            if (dateNew.Minutes != 0)
+                allTimeString += dateNew.Minutes.ToString() + " minutes ";
+            if (dateNew.Seconds != 0)
+                allTimeString += dateNew.Seconds.ToString() + " seconds ";
+
+
+            InfoText.Text = allTimeString;
         }
     }
 }

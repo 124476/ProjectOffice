@@ -19,11 +19,7 @@
                 <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
             <TextBlock Text="Список задач" FontSize="17"></TextBlock>
-            <StackPanel Grid.Column="1"  Orientation="Horizontal">
-
-                <TextBox x:Name="PoiskText" FontSize="17" TextChanged="PoiskText_TextChanged" Width="300" ></TextBox>
-                <ComboBox x:Name="CBStatuses" SelectedIndex="0" DisplayMemberPath="Name"/>
-            </StackPanel>
+            <TextBox Grid.Column="1" x:Name="PoiskText" FontSize="17" TextChanged="PoiskText_TextChanged" Width="300" ></TextBox>
         </Grid>
         <ListView Name="ListTasks" MouseDoubleClick="ListTasks_MouseDoubleClick" Grid.Row="1">
             <ListView.ItemTemplate>

@@ -40,7 +40,10 @@
                 <Button x:Name="CloseBtn" FontSize="17" Content="Закрыть" Click="CloseBtn_Click" Foreground="DarkRed" Background="White"></Button>
             </StackPanel>
         </Grid>
-        <Grid Name="DataDate" Grid.Row="1">
-        </Grid>
+        <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Disabled">
+            <StackPanel>
+                <Grid Name="DataDate"></Grid>
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Page>
