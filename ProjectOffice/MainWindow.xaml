@@ -5,36 +5,48 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjectOffice"
         mc:Ignorable="d"
-        Title="MainWindow" MinHeight="600" MinWidth="800" Height="600" Width="800">
+        Title="MainWindow" MinHeight="700" MinWidth="1200" Height="700" Width="1200">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <StackPanel Orientation="Horizontal">
-            <StackPanel Width="50" Background="Blue">
-                <Image Source="Imports\app_icon.png" Margin="0,10,0,10" Width="30"></Image>
+
+        <Grid Background="Blue">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <StackPanel Width="50" Grid.Row="0">
+                <Image Source="Imports\app_icon.png" Margin="0,10,0,10" Width="30" 
+                       RenderOptions.BitmapScalingMode="Fant"></Image>
                 <Button Width="25" Height="25" Margin="0,0,0,4" Background="Blue" Name="DashBtn" Click="DashBtn_Click">
-                    <Image Source="Imports\app_dasboard_icon.png"></Image>
+                    <Image Source="Imports\app_dasboard_icon.png" RenderOptions.BitmapScalingMode="Fant"></Image>
                 </Button>
-                <Button Width="25" Height="25" Margin="0,0,0,4" Background="Blue" Name="TaskBtn" Click="TaskBtn_Click"> 
+                <Button Width="25" Height="25" Margin="0,0,0,4" Background="Blue" Name="TaskBtn" Click="TaskBtn_Click">
                     <Image Source="Imports\app_tasks_icon.png"></Image>
                 </Button>
                 <Button Width="25" Height="25" Margin="0,0,0,4" Background="Blue" Name="CalBtn" Click="CalBtn_Click">
                     <Image Source="Imports\app_cal_icon.png"></Image>
                 </Button>
-                <ListView Name="ListProjects" Height="250" Background="Blue" Width="70">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <Button Width="25" Height="25" Margin="0,0,0,4" Background="{Binding BackgroundColor}" Foreground="{Binding ForengroundColor}" Name="ProjectBtn" Click="ProjectBtn_Click">
-                                <TextBlock Text="{Binding ShortName}"></TextBlock>
-                            </Button>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-                <TextBlock Name="VersionText" FontSize="9" Margin="0,0,0,10" Foreground="White"></TextBlock>
             </StackPanel>
-        </StackPanel>
-            <Frame x:Name="MyFrame" Grid.Column="1" NavigationUIVisibility="Hidden"></Frame>
+            <ListView Name="ListProjects" ScrollViewer.VerticalScrollBarVisibility="Hidden" BorderBrush="Transparent" Background="Blue" Width="70" Grid.Row="1">
+                <ListView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel HorizontalAlignment="Center"/>
+                    </ItemsPanelTemplate>
+                </ListView.ItemsPanel>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Button Width="25" Height="25"   Content="{Binding ShortName}" Background="{Binding BackgroundColor}" Foreground="{Binding ForengroundColor}" Name="ProjectBtn" Click="ProjectBtn_Click"
+                                HorizontalAlignment="Center">
+                        </Button>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <TextBlock Name="VersionText" FontSize="9" Margin="0,0,0,10" Foreground="White" Grid.Row="2"></TextBlock>
+        </Grid>
+        <Frame x:Name="MyFrame" Grid.Column="1" NavigationUIVisibility="Hidden"></Frame>
     </Grid>
 </Window>

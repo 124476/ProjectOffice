@@ -5,16 +5,16 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="e402be3b5f034a29a3677969d131427d" Name="Diagram1">
-        <EntityTypeShape EntityType="ProgectOfficeDatabaseModel.DocumentFile" Width="1.5" PointX="5.25" PointY="7.375" />
-        <EntityTypeShape EntityType="ProgectOfficeDatabaseModel.Employe" Width="1.5" PointX="0.75" PointY="14.875" />
-        <EntityTypeShape EntityType="ProgectOfficeDatabaseModel.LastStatus" Width="1.5" PointX="5.25" PointY="4.5" />
-        <EntityTypeShape EntityType="ProgectOfficeDatabaseModel.Portfile" Width="1.5" PointX="0.75" PointY="22.875" />
-        <EntityTypeShape EntityType="ProgectOfficeDatabaseModel.Position" Width="1.5" PointX="1.5" PointY="20.125" />
-        <EntityTypeShape EntityType="ProgectOfficeDatabaseModel.Project" Width="1.5" PointX="0.75" PointY="10.125" />
-        <EntityTypeShape EntityType="ProgectOfficeDatabaseModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="0.75" />
-        <EntityTypeShape EntityType="ProgectOfficeDatabaseModel.Task" Width="1.5" PointX="3" PointY="2.75" />
-        <EntityTypeShape EntityType="ProgectOfficeDatabaseModel.TaskStatus" Width="1.5" PointX="0.75" PointY="4.5" />
-        <EntityTypeShape EntityType="ProgectOfficeDatabaseModel.Wather" Width="1.5" PointX="5.25" PointY="1.5" />
+        <EntityTypeShape EntityType="ProgectOfficeDatabaseModel.DocumentFile" Width="1.5" PointX="8.25" PointY="7.375" />
+        <EntityTypeShape EntityType="ProgectOfficeDatabaseModel.Employe" Width="1.5" PointX="3.75" PointY="10.625" />
+        <EntityTypeShape EntityType="ProgectOfficeDatabaseModel.LastStatus" Width="1.5" PointX="3" PointY="4.5" />
+        <EntityTypeShape EntityType="ProgectOfficeDatabaseModel.Portfile" Width="1.5" PointX="3.75" PointY="20.375" />
+        <EntityTypeShape EntityType="ProgectOfficeDatabaseModel.Position" Width="1.5" PointX="1.5" PointY="12" />
+        <EntityTypeShape EntityType="ProgectOfficeDatabaseModel.Project" Width="1.5" PointX="3.75" PointY="15.75" />
+        <EntityTypeShape EntityType="ProgectOfficeDatabaseModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ProgectOfficeDatabaseModel.Task" Width="1.5" PointX="6" PointY="2.75" />
+        <EntityTypeShape EntityType="ProgectOfficeDatabaseModel.TaskStatus" Width="1.5" PointX="0.75" PointY="4.625" />
+        <EntityTypeShape EntityType="ProgectOfficeDatabaseModel.Wather" Width="1.5" PointX="8.25" PointY="4.625" />
         <AssociationConnector Association="ProgectOfficeDatabaseModel.FK_DocumentFile_Task" />
         <AssociationConnector Association="ProgectOfficeDatabaseModel.FK_Employe_Position" />
         <AssociationConnector Association="ProgectOfficeDatabaseModel.FK_Project_Employe" />

@@ -34,7 +34,7 @@ namespace ProjectOffice
 
 
             var version = Assembly.GetExecutingAssembly().GetName().Version;
-            VersionText.Text = version.ToString();
+            VersionText.Text = $"{version.Major}.{version.Minor}.{version.Build.ToString()}";
 
             MyFrame.Navigate(new OknoTask());
             ListProjects.ItemsSource = App.DB.Project.ToList();

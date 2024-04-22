@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("imports/app_cal_icon.svg")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("models/projestofficedatabase.context.tt")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("models/projestofficedatabase.tt")]
 

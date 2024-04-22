@@ -1,10 +1,12 @@
 ﻿using Microsoft.Win32;
+using Newtonsoft.Json;
 using ProjectOffice.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.IO;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -16,6 +18,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml.Serialization;
 
 namespace ProjectOffice.Pages
 {
@@ -79,20 +82,20 @@ namespace ProjectOffice.Pages
             {
                 if (col == 0)
                 {
-                    DataGrid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(40)});
+                    DataGrid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(40) });
                     TextBlock mon = new TextBlock() { Text = "Mon", FontSize = 13, Background = Brushes.LightGray };
                     TextBlock web = new TextBlock() { Text = "Web", FontSize = 13, Background = Brushes.LightGray };
                     TextBlock fri = new TextBlock() { Text = "Fri", FontSize = 13, Background = Brushes.LightGray };
                     DataGrid.Children.Add(mon);
                     DataGrid.Children.Add(web);
                     DataGrid.Children.Add(fri);
-                    Grid.SetRow(mon, 0);
+                    Grid.SetRow(mon, 1);
                     Grid.SetRow(web, 3);
                     Grid.SetRow(fri, 5);
                     continue;
                 }
                 DataGrid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(40) });
-                TextBlock textBlock = new TextBlock() { Text = col.ToString(), Background=Brushes.LightGray };
+                TextBlock textBlock = new TextBlock() { Text = col.ToString(), Background = Brushes.LightGray };
                 DataGrid.Children.Add(textBlock);
                 Grid.SetColumn(textBlock, col);
             }
@@ -136,7 +139,7 @@ namespace ProjectOffice.Pages
             }
         }
 
-        private void AllTasksBtn_Click(object sender, RoutedEventArgs e)
+        private void AllUsers_Click(object sender, RoutedEventArgs e)
         {
             var dialog = new SaveFileDialog { Filter = "*.csv; | *.csv;" };
             if (dialog.ShowDialog().GetValueOrDefault())
@@ -156,9 +159,24 @@ namespace ProjectOffice.Pages
             }
         }
 
-        private void AllUsers_Click(object sender, RoutedEventArgs e)
+        private void AllTasksBtn_Click(object sender, RoutedEventArgs e)
         {
+            var dialog = new SaveFileDialog { Filter = "*.json; | *.json;" };
+            if (dialog.ShowDialog().GetValueOrDefault())
+            {
+                var file = File.Create(dialog.FileName);
+                file.Close();
 
+                var resultJson = JsonConvert.SerializeObject(App.DB.Task.Where(x => x.ProjectId == App.project.Id).Select(x => new
+                {
+                    x.Id,
+                    x.Name,
+                    x.ShortTitle,
+                    Status = x.TaskStatus.Name,
+                }).ToList());
+
+                File.WriteAllText(dialog.FileName, resultJson);
+            }
         }
 
         private void AllWinTasks_Click(object sender, RoutedEventArgs e)
@@ -169,24 +187,34 @@ namespace ProjectOffice.Pages
                 var file = File.Create(dialog.FileName);
                 file.Close();
 
-                string text = "№;ShortTitle;Name;Исполнитель";
-                int num = 1;
                 var dateNow = DateTime.Now;
                 var datePoisk = dateNow.AddMonths(-1);
-                var tasks = App.DB.Task.Where(x => x.ProjectId == App.project.Id && dateNow >= x.DateEnd && datePoisk <= x.DateEnd).ToList();
-                foreach (var item in tasks)
-                {
-                    text += "\n" + num.ToString() + ";" + item.ShortTitle + ";" + item.Name + ";" + item.Employe.FullName;
-                    num++;
-                }
 
-                File.WriteAllText(dialog.FileName, text);
+                var tasks = App.DB.Task.Where(x => x.ProjectId == App.project.Id && dateNow >= x.DateEnd && datePoisk <= x.DateEnd).ToList();
+
             }
         }
 
         private void AllWillTasks_Click(object sender, RoutedEventArgs e)
         {
+            var dialog = new SaveFileDialog() { Filter = "*.json; | *.json;" };
+            if (dialog.ShowDialog().GetValueOrDefault())
+            {
+                var file = File.Create(dialog.FileName);
+                file.Close();
 
+                DateTime dateDelta = DateTime.Now.AddMonths(1);
+                var resultJson = JsonConvert.SerializeObject(App.DB.Task.Where(x => x.ProjectId == App.project.Id
+                && x.StatusId == 2 && x.FinishActualTime >= DateTime.Now && x.FinishActualTime <= dateDelta).Select(x => new
+                {
+                    x.Id,
+                    x.ShortTitle,
+                    x.Name,
+                    Status = x.TaskStatus.Name,
+                }).ToList());
+
+                File.WriteAllText(dialog.FileName, resultJson);
+            }
         }
 
         private void AllLastTasks_Click(object sender, RoutedEventArgs e)
@@ -202,7 +230,7 @@ namespace ProjectOffice.Pages
                 var dateNow = DateTime.Now;
                 var datePoiskStart = dateNow.AddDays(14);
                 var datePoiskEnd = dateNow.AddDays(-14);
-                foreach (var item in App.DB.Task.Where(x => x.ProjectId == App.project.Id 
+                foreach (var item in App.DB.Task.Where(x => x.ProjectId == App.project.Id
                 && (x.DateStart <= dateNow && dateNow <= x.DateEnd || x.DateStart >= dateNow && x.DateStart <= datePoiskStart || x.DateEnd <= dateNow && x.DateEnd >= datePoiskEnd)))
                 {
                     text += sum.ToString() + ". " + item.Name + "\n";

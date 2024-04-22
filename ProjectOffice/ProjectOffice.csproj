@@ -13,7 +13,7 @@
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <Deterministic>true</Deterministic>
+    <Deterministic>false</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -40,6 +40,9 @@
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -71,20 +74,11 @@
     <Compile Include="Models\Wather.cs">
       <DependentUpon>ProjestOfficeDatabase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Windows\OknoDelete.xaml.cs">
-      <DependentUpon>OknoDelete.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Windows\OknoHistory.xaml.cs">
-      <DependentUpon>OknoHistory.xaml</DependentUpon>
+    <Compile Include="Pages\PageHistory.xaml.cs">
+      <DependentUpon>PageHistory.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\OknoInfoTask.xaml.cs">
       <DependentUpon>OknoInfoTask.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Windows\OknoNewTask.xaml.cs">
-      <DependentUpon>OknoNewTask.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Windows\OknoOneTask.xaml.cs">
-      <DependentUpon>OknoOneTask.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -110,23 +104,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Windows\OknoDelete.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Windows\OknoHistory.xaml">
+    <Page Include="Pages\PageHistory.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\OknoInfoTask.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Windows\OknoNewTask.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Windows\OknoOneTask.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -221,6 +203,7 @@
     <Resource Include="Imports\app_dasboard_icon.png" />
     <Resource Include="Imports\app_tasks_icon.png" />
     <Resource Include="Imports\app_plus_icon.png" />
+    <Content Include="Imports\app_cal_icon.svg" />
     <Content Include="Models\ProjestOfficeDatabase.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ProjestOfficeDatabase.Context.cs</LastGenOutput>

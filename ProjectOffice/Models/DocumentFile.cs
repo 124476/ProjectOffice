@@ -17,6 +17,7 @@ namespace ProjectOffice.Models
         public int Id { get; set; }
         public Nullable<int> TaskId { get; set; }
         public byte[] Photo { get; set; }
+        public string Name { get; set; }
     
         public virtual Task Task { get; set; }
     }

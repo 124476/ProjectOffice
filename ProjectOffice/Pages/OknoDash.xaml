@@ -68,7 +68,10 @@
                 <Button x:Name="AllWillTasks"  Content="Открытые задачи" Click="AllWillTasks_Click"  FontSize="17" Background="LightGray"></Button>
                 <Button x:Name="AllLastTasks"  Content="Последние задачи" Click="AllLastTasks_Click"  FontSize="17" Background="LightGray"></Button>
             </StackPanel>
-            <Grid Name="DataGrid" Width="500" Height="250" Background="LightGray" Margin="10,10,10,10"></Grid>
+            <StackPanel Background="LightGray" Margin="10,10,10,10">
+                <TextBlock Text="Тепловая диаграмма" FontSize="17" Margin="10,0"></TextBlock>
+                <Grid Name="DataGrid" Width="500" Height="250" Margin="10,10"></Grid>
+            </StackPanel>
         </WrapPanel>
     </Grid>
 </Page>

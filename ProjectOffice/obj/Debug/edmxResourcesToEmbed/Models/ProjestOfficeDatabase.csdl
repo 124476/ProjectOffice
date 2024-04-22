@@ -67,6 +67,7 @@
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="TaskId" Type="Int32" />
     <Property Name="Photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Task" Relationship="ProgectOfficeDatabaseModel.FK_DocumentFile_Task" FromRole="DocumentFile" ToRole="Task" />
   </EntityType>
   <EntityType Name="Employe">
@@ -169,6 +170,7 @@
     <Property Name="DateStart" Type="DateTime" Precision="3" />
     <Property Name="DateEnd" Type="DateTime" Precision="3" />
     <Property Name="PortfileId" Type="Int32" />
+    <Property Name="IsDelete" Type="Boolean" />
     <NavigationProperty Name="DocumentFile" Relationship="ProgectOfficeDatabaseModel.FK_DocumentFile_Task" FromRole="Task" ToRole="DocumentFile" />
     <NavigationProperty Name="Employe" Relationship="ProgectOfficeDatabaseModel.FK_Task_Employe1" FromRole="Task" ToRole="Employe" />
     <NavigationProperty Name="LastStatus" Relationship="ProgectOfficeDatabaseModel.FK_LastStatus_Task" FromRole="Task" ToRole="LastStatus" />

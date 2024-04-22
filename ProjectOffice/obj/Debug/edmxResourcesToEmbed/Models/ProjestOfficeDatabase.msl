@@ -4,6 +4,7 @@
     <EntitySetMapping Name="DocumentFile">
       <EntityTypeMapping TypeName="ProgectOfficeDatabaseModel.DocumentFile">
         <MappingFragment StoreEntitySet="DocumentFile">
+          <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Photo" ColumnName="Photo" />
           <ScalarProperty Name="TaskId" ColumnName="TaskId" />
           <ScalarProperty Name="Id" ColumnName="Id" />
@@ -86,6 +87,7 @@
     <EntitySetMapping Name="Task">
       <EntityTypeMapping TypeName="ProgectOfficeDatabaseModel.Task">
         <MappingFragment StoreEntitySet="Task">
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
           <ScalarProperty Name="PortfileId" ColumnName="PortfileId" />
           <ScalarProperty Name="DateEnd" ColumnName="DateEnd" />
           <ScalarProperty Name="DateStart" ColumnName="DateStart" />

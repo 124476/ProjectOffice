@@ -6,39 +6,214 @@
       xmlns:local="clr-namespace:ProjectOffice.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="OknoTask">
+      Title="OknoTask"
+      Loaded="Page_Loaded">
 
-    <Grid >
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition x:Name="TaskColumnNew" Width="0"/>
+            <ColumnDefinition x:Name="TaskColumn" Width="0"/>
+        </Grid.ColumnDefinitions>
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition Width="auto"/>
             </Grid.ColumnDefinitions>
-            <TextBlock Text="Список задач" FontSize="17"></TextBlock>
-            <TextBox Grid.Column="1" x:Name="PoiskText" FontSize="17" TextChanged="PoiskText_TextChanged" Width="300" ></TextBox>
+            <TextBlock Text="Список задач" FontSize="17" Margin="10"></TextBlock>
+            <TextBox Grid.Column="1" x:Name="PoiskText" FontSize="17" TextChanged="PoiskText_TextChanged" Width="300"
+                     Padding="5"
+                     Margin="10">
+                <TextBox.Style>
+                    <Style TargetType="TextBox">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate>
+                                    <Border CornerRadius="5"
+                                            BorderThickness="1"
+                                            BorderBrush="Black">
+                                        <ScrollViewer x:Name="PART_ContentHost"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </TextBox.Style>
+            </TextBox>
         </Grid>
-        <ListView Name="ListTasks" MouseDoubleClick="ListTasks_MouseDoubleClick" Grid.Row="1">
+        <ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled" Name="ListTasks" MouseDoubleClick="ListTasks_MouseDoubleClick" Grid.Row="1" Grid.Column="0">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"></Setter>
+                </Style>
+            </ListView.ItemContainerStyle>
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="{Binding ShortTitle}" FontSize="13" Foreground="LightGray" Margin="10,0,10,0"></TextBlock>
-                        <StackPanel Background="{Binding TaskStatus.Color}">
-                            <TextBlock Text="{Binding TaskStatus.Name}" Width="54" FontSize="13" Margin="10,0,10,0"></TextBlock>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="{Binding ShortTitle}" FontSize="13" Foreground="LightGray" Margin="10,0,10,0" Grid.Column="0" TextWrapping="Wrap"></TextBlock>
+                        <StackPanel Background="{Binding TaskStatus.Color}" Grid.Column="1">
+                            <TextBlock Text="{Binding TaskStatus.Name}" Width="54" FontSize="13" Margin="10,0,10,0" TextWrapping="Wrap"></TextBlock>
                         </StackPanel>
-                        <TextBlock Text="{Binding Name}" FontSize="13" Margin="10,0,10,0"></TextBlock>
-                        <TextBlock Text="{Binding EmployeeIspolName}" FontSize="13" Margin="10,0,10,0" Foreground="Gray"></TextBlock>
-                        <TextBlock Text="{Binding DateEnd, StringFormat='dd/MM/yyyy hh:mm'}" FontSize="13" Margin="10,0,10,0" Foreground="{Binding BackColor}"></TextBlock>
-                    </StackPanel>
+                        <TextBlock Text="{Binding Name}" FontSize="13" Margin="10,0,10,0" Grid.Column="2" TextWrapping="Wrap"></TextBlock>
+                        <TextBlock Text="{Binding EmployeeIspolName}" FontSize="13" Margin="10,0,10,0" Foreground="Gray" Grid.Column="3" TextWrapping="Wrap"></TextBlock>
+                        <TextBlock Text="{Binding DateEnd, StringFormat='dd/MM/yyyy hh:mm'}" FontSize="13" Margin="10,0,10,0" Foreground="{Binding BackColor}" Grid.Column="4" TextWrapping="Wrap"></TextBlock>
+                    </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Button Name="Add" Background="Orange" Grid.Row="1" Height="30" Width="30" HorizontalAlignment="Right"  Click="Add_Click" VerticalAlignment="Bottom">
+        <Button Name="Add" Background="Orange" Grid.Row="1" Height="30" Width="30" Margin="10,10,10,10"
+                HorizontalAlignment="Right"  Click="Add_Click" VerticalAlignment="Bottom" Grid.Column="0">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Style.Resources>
+                        <Style TargetType="Border">
+                            <Setter  Property="Border.CornerRadius" Value="60"/>
+                        </Style>
+                    </Style.Resources>
+                </Style>
+            </Button.Style>
             <Image Source="\Imports\app_plus_icon.png"></Image>
         </Button>
+
+        <Grid Grid.Column="1" Grid.Row="1">
+            <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Короткое название:" Margin="0,0,10,0" FontSize="17" Width="270"></TextBlock>
+                    <TextBox Text="{Binding ShortTitle}" FontSize="17" Margin="0,0,10,0" Width="200"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Название:" Margin="0,0,10,0" FontSize="17" Width="270"></TextBlock>
+                    <TextBox Text="{Binding Name}" FontSize="17" Margin="0,0,10,0" Width="200"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Создание задачи:" Margin="0,0,10,0" FontSize="17" Width="270"></TextBlock>
+                    <DatePicker SelectedDate="{Binding CreatedTime}" Name="CreatedTime" FontSize="17"></DatePicker>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Дедлайн:" Margin="0,0,10,0" FontSize="17" Width="270"></TextBlock>
+                    <DatePicker SelectedDate="{Binding FinishActualTime}" Name="FinishActualTime" FontSize="17"></DatePicker>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Предшествующая задача:" Margin="0,0,10,0" FontSize="17" Width="270"></TextBlock>
+                    <ComboBox Name="ComboTasks" FontSize="17" DisplayMemberPath="ShortTitle" Width="200"></ComboBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Фактическое начало выполнения:" Margin="0,0,10,0" FontSize="17" Width="270"></TextBlock>
+                    <DatePicker SelectedDate="{Binding DateStart}" Name="DateStart" FontSize="17"></DatePicker>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Фактическое завершение:" Margin="0,0,10,0" FontSize="17" Width="270"></TextBlock>
+                    <DatePicker SelectedDate="{Binding DateEnd}" Name="DateEnd" FontSize="17"></DatePicker>
+                </StackPanel>
+                <TextBlock Text="Описание:" Margin="0,0,10,0" FontSize="17"></TextBlock>
+                <TextBox Text="{Binding Descriprion}" FontSize="17"></TextBox>
+                <TextBlock Text="Исполнитель:" Margin="0,0,10,0" FontSize="17"></TextBlock>
+                <ComboBox Name="ComboIsplos" FontSize="17" DisplayMemberPath="FullName"></ComboBox>
+                <Button x:Name="Save" FontSize="17" Content="Добавить" Click="Save_Click"  Margin="0,10,0,0"></Button>
+                <Button x:Name="DontBtn" FontSize="17" Content="Отмена" Click="DontBtn_Click"  Margin="0,10,0,0"></Button>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Column="2" Grid.Row="1">
+            <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="{Binding ShortTitle}" FontSize="17" Margin="0,0,10,0"></TextBlock>
+                    <TextBlock Text="{Binding Name}" FontSize="17" Margin="0,0,10,0"></TextBlock>
+                    <StackPanel Background="{Binding TaskStatus.Color}">
+                        <TextBlock Text="{Binding TaskStatus.Name}" Width="54" FontSize="13" Margin="10,0,10,0"></TextBlock>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Создание задачи:" Margin="0,0,10,0" FontSize="17"></TextBlock>
+                    <TextBlock Text="{Binding CreatedTime, StringFormat='dd/MM/yyyy mm:hh'}" FontSize="17"></TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Дедлайн:" Margin="0,0,10,0" FontSize="17"></TextBlock>
+                    <TextBlock Text="{Binding FinishActualTime, StringFormat='dd/MM/yyyy mm:hh'}" FontSize="17"></TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Предшествующая задача:" Margin="0,0,10,0" FontSize="17"></TextBlock>
+                    <TextBlock Text="{Binding LastTask}" FontSize="17"></TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Фактическое начало выполнения:" Margin="0,0,10,0" FontSize="17"></TextBlock>
+                    <TextBlock Text="{Binding DateStart, StringFormat='dd/MM/yyyy mm:hh'}" FontSize="17"></TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Фактическое завершение:" Margin="0,0,10,0" FontSize="17"></TextBlock>
+                    <TextBlock Text="{Binding DateEnd, StringFormat='dd/MM/yyyy mm:hh'}" FontSize="17"></TextBlock>
+                </StackPanel>
+                <TextBlock Text="Описание:" Margin="0,0,10,0" FontSize="17"></TextBlock>
+                <TextBox Text="{Binding Descriprion}" FontSize="17"></TextBox>
+                <TextBlock Text="Исполнитель:" Margin="0,0,10,0" FontSize="17"></TextBlock>
+                <ComboBox Name="ComboIsplosies" FontSize="17" DisplayMemberPath="FullName" SelectedItem="{Binding Employe}"></ComboBox>
+                <TextBlock Text="Приложение:" Margin="0,0,10,0" FontSize="17"></TextBlock>
+                <ScrollViewer>
+                    <ListView x:Name="ListPhotos" Height="80">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Name}" FontSize="17"></TextBlock>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </ScrollViewer>
+                <Button Name="PhotoGot" FontSize="17" Click="PhotoGot_Click" Content="Добавить"><Button.Style>
+    <Style TargetType="Button">
+        <Style.Resources>
+            <Style TargetType="Border">
+                <Setter  Property="Border.CornerRadius" Value="10"/>
+            </Style>
+        </Style.Resources>
+    </Style>
+</Button.Style></Button>
+                <TextBlock Text="Наблюдатели:" Margin="0,0,10,0" FontSize="17"></TextBlock>
+                <ScrollViewer>
+                    <ListView x:Name="ListWathers" Height="80">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding FullName}" FontSize="17"></TextBlock>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </ScrollViewer>
+                <ComboBox Name="ComboWathes" FontSize="17" DisplayMemberPath="FullName" SelectionChanged="ComboWathes_SelectionChanged"></ComboBox>
+                <Button x:Name="HistoryBtn" FontSize="17" Content="История смены статусов" Margin="0,10,0,0" Click="HistoryBtn_Click"></Button>
+                <StackPanel Orientation="Horizontal">
+                    <Button FontSize="17" Content="Сохранить" Background="Blue" Foreground="White" Width="200" Margin="10,10,10,0" Click="Save_Click">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Style.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter  Property="Border.CornerRadius" Value="10"/>
+                                    </Style>
+                                </Style.Resources>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                    <Button x:Name="Del" FontSize="17" Content="Удалить" Background="White" Foreground="Red" Width="200" Margin="0,10,0,0" Click="Del_Click">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Style.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter  Property="Border.CornerRadius" Value="10"/>
+                                    </Style>
+                                </Style.Resources>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
     </Grid>
 </Page>
  

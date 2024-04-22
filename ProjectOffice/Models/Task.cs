@@ -39,6 +39,7 @@ namespace ProjectOffice.Models
         public Nullable<System.DateTime> DateStart { get; set; }
         public Nullable<System.DateTime> DateEnd { get; set; }
         public Nullable<int> PortfileId { get; set; }
+        public Nullable<bool> IsDelete { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DocumentFile> DocumentFile { get; set; }

@@ -7,6 +7,7 @@
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="TaskId" Type="int" />
     <Property Name="Photo" Type="image" />
+    <Property Name="Name" Type="nvarchar" MaxLength="150" />
   </EntityType>
   <EntityType Name="Employe">
     <Key>
@@ -96,6 +97,7 @@
     <Property Name="DateStart" Type="datetime" />
     <Property Name="DateEnd" Type="datetime" />
     <Property Name="PortfileId" Type="int" />
+    <Property Name="IsDelete" Type="bit" />
   </EntityType>
   <EntityType Name="TaskStatus">
     <Key>

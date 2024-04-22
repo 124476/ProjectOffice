@@ -12,6 +12,7 @@
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TaskId" Type="int" />
           <Property Name="Photo" Type="image" />
+          <Property Name="Name" Type="nvarchar" MaxLength="150" />
         </EntityType>
         <EntityType Name="Employe">
           <Key>
@@ -101,6 +102,7 @@
           <Property Name="DateStart" Type="datetime" />
           <Property Name="DateEnd" Type="datetime" />
           <Property Name="PortfileId" Type="int" />
+          <Property Name="IsDelete" Type="bit" />
         </EntityType>
         <EntityType Name="TaskStatus">
           <Key>
@@ -393,6 +395,7 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TaskId" Type="Int32" />
           <Property Name="Photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Task" Relationship="ProgectOfficeDatabaseModel.FK_DocumentFile_Task" FromRole="DocumentFile" ToRole="Task" />
         </EntityType>
         <EntityType Name="Employe">
@@ -495,6 +498,7 @@
           <Property Name="DateStart" Type="DateTime" Precision="3" />
           <Property Name="DateEnd" Type="DateTime" Precision="3" />
           <Property Name="PortfileId" Type="Int32" />
+          <Property Name="IsDelete" Type="Boolean" />
           <NavigationProperty Name="DocumentFile" Relationship="ProgectOfficeDatabaseModel.FK_DocumentFile_Task" FromRole="Task" ToRole="DocumentFile" />
           <NavigationProperty Name="Employe" Relationship="ProgectOfficeDatabaseModel.FK_Task_Employe1" FromRole="Task" ToRole="Employe" />
           <NavigationProperty Name="LastStatus" Relationship="ProgectOfficeDatabaseModel.FK_LastStatus_Task" FromRole="Task" ToRole="LastStatus" />
@@ -676,6 +680,7 @@
           <EntitySetMapping Name="DocumentFile">
             <EntityTypeMapping TypeName="ProgectOfficeDatabaseModel.DocumentFile">
               <MappingFragment StoreEntitySet="DocumentFile">
+                <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Photo" ColumnName="Photo" />
                 <ScalarProperty Name="TaskId" ColumnName="TaskId" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
@@ -758,6 +763,7 @@
           <EntitySetMapping Name="Task">
             <EntityTypeMapping TypeName="ProgectOfficeDatabaseModel.Task">
               <MappingFragment StoreEntitySet="Task">
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
                 <ScalarProperty Name="PortfileId" ColumnName="PortfileId" />
                 <ScalarProperty Name="DateEnd" ColumnName="DateEnd" />
                 <ScalarProperty Name="DateStart" ColumnName="DateStart" />
