@@ -34,3 +34,6 @@ C:\Users\Stipo6\source\repos\ProjectOffice\ProjectOffice\obj\Debug\Windows\OknoN
 C:\Users\Stipo6\source\repos\ProjectOffice\ProjectOffice\obj\Debug\Windows\OknoNewTask.baml
 C:\Users\Stipo6\source\repos\ProjectOffice\ProjectOffice\obj\Debug\Windows\OknoInfoTask.g.cs
 C:\Users\Stipo6\source\repos\ProjectOffice\ProjectOffice\obj\Debug\Windows\OknoInfoTask.baml
+C:\Users\Stipo6\source\repos\ProjectOffice\ProjectOffice\obj\Debug\ProjectOffice.csproj.ResolveComReference.cache
+C:\Users\Stipo6\source\repos\ProjectOffice\ProjectOffice\obj\Debug\Windows\OknoHistory.g.cs
+C:\Users\Stipo6\source\repos\ProjectOffice\ProjectOffice\obj\Debug\Windows\OknoHistory.baml

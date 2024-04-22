@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjectOffice.Windows"
         mc:Ignorable="d"
-        Title="OknoOneTask" Height="450" Width="800" MinHeight="450" MinWidth="800">
+        Title="OknoOneTask" Height="600" Width="600" MinHeight="600" MinWidth="600">
     <Grid>
         <StackPanel>
             <StackPanel Orientation="Horizontal">
@@ -48,6 +48,7 @@
                 </ListView.ItemTemplate>
             </ListView>
             <ComboBox Name="ComboWathes" SelectedItem="{Binding Watch}" FontSize="17" DisplayMemberPath="FullName" SelectionChanged="ComboWathes_SelectionChanged"></ComboBox>
+            <Button x:Name="HistoryBtn" FontSize="17" Content="История смены статусов" Margin="0,10,0,0" Click="HistoryBtn_Click"></Button>
             <StackPanel Orientation="Horizontal">
                 <Button x:Name="Save" FontSize="17" Content="Сохранить" Background="Blue" Foreground="White" Width="200" Margin="10,10,10,0" Click="Save_Click"></Button>
                 <Button x:Name="Del" FontSize="17" Content="Удалить" Background="White" Foreground="Red" Width="200" Margin="0,10,0,0" Click="Del_Click"></Button>

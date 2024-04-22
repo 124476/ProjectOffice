@@ -31,7 +31,7 @@
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="StatusId" Type="int" />
-    <Property Name="Date" Type="date" />
+    <Property Name="Date" Type="datetime" />
     <Property Name="TaskId" Type="int" />
   </EntityType>
   <EntityType Name="Portfile">

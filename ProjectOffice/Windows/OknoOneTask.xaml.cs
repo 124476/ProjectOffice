@@ -86,5 +86,11 @@ namespace ProjectOffice.Windows
                 DialogResult = true;
             }
         }
+
+        private void HistoryBtn_Click(object sender, RoutedEventArgs e)
+        {
+            var dialog = new OknoHistory(contextTask);
+            dialog.ShowDialog();
+        }
     }
 }

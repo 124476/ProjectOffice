@@ -36,7 +36,7 @@
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="StatusId" Type="int" />
-          <Property Name="Date" Type="date" />
+          <Property Name="Date" Type="datetime" />
           <Property Name="TaskId" Type="int" />
         </EntityType>
         <EntityType Name="Portfile">
@@ -423,7 +423,7 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="StatusId" Type="Int32" />
-          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="Date" Type="DateTime" Precision="3" />
           <Property Name="TaskId" Type="Int32" />
           <NavigationProperty Name="Task" Relationship="ProgectOfficeDatabaseModel.FK_LastStatus_Task" FromRole="LastStatus" ToRole="Task" />
           <NavigationProperty Name="TaskStatus" Relationship="ProgectOfficeDatabaseModel.FK_LastStatus_TaskStatus" FromRole="LastStatus" ToRole="TaskStatus" />

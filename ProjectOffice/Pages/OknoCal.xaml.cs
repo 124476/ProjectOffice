@@ -1,4 +1,5 @@
-﻿using Microsoft.Win32;
+﻿using Microsoft.Office.Interop.Excel;
+using Microsoft.Win32;
 using ProjectOffice.Properties;
 using ProjectOffice.Windows;
 using System;
@@ -17,6 +18,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Page = System.Windows.Controls.Page;
 
 namespace ProjectOffice.Pages
 {
@@ -58,7 +60,7 @@ namespace ProjectOffice.Pages
                 while (true)
                 {
                     var listId = listTasks[listTasks.Count() - 1];
-                    if (listId != null)
+                    if (listId != null && App.DB.Task.FirstOrDefault(x => x.Id == listId.PreviousTaskId) != null)
                     {
                         listTasks.Add(App.DB.Task.FirstOrDefault(x => x.Id == listId.PreviousTaskId));
                     }
@@ -68,12 +70,12 @@ namespace ProjectOffice.Pages
                     }
                 }
 
-               while (true)
+                while (true)
                 {
                     var listId = listTasks[listTasks.Count() - 1];
                     if (listId != null && App.DB.Task.FirstOrDefault(x => x.PreviousTaskId == listId.Id) != null)
                     {
-                        listTasks.Add(App.DB.Task.FirstOrDefault(x => x.PreviousTaskId == listTasks[listTasks.Count - 1].Id));
+                        listTasks.Add(App.DB.Task.FirstOrDefault(x => x.PreviousTaskId == listId.Id));
                     }
                     else
                     {
@@ -104,15 +106,22 @@ namespace ProjectOffice.Pages
             }
 
             TimeSpan timeSpan = TimeSpan.Zero;
+            bool flag = true;
             while (timeSpan.TotalHours != 24)
             {
+                if (flag && timeSpan.Hours == DateTime.Now.Hour + 1)
+                {
+                    DataDate.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(15) });
+                    flag = false;
+                    continue;
+                }
                 TextBlock textBlock = new TextBlock() { Text = timeSpan.ToString() };
                 timeSpan = timeSpan + TimeSpan.FromHours(1);
-                DataDate.RowDefinitions.Add(new RowDefinition());
+                DataDate.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(20) });
                 DataDate.Children.Add(textBlock);
                 Grid.SetRow(textBlock, DataDate.RowDefinitions.Count() - 1);
             }
-            DataDate.RowDefinitions.Add(new RowDefinition());
+            DataDate.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(20) });
 
             var tasks = App.DB.Task.Where(x => x.ProjectId == App.project.Id).ToList();
 
@@ -127,8 +136,8 @@ namespace ProjectOffice.Pages
                 DataDate.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(30 * Settings.Default.delta) });
 
                 List<Models.Task> taskDays = new List<Models.Task>();
-                try 
-                { 
+                try
+                {
                     foreach (var item in tasks)
                     {
                         if (item.DateStart.Value.AddHours(-item.DateStart.Value.Hour).AddMinutes(-item.DateStart.Value.Minute).AddSeconds(-item.DateStart.Value.Second) <= dateTime && item.DateEnd == null)
@@ -148,6 +157,7 @@ namespace ProjectOffice.Pages
                 }
                 List<Models.Task> listProv = new List<Models.Task>();
                 TimeSpan timeDelta = TimeSpan.Parse("00:00:00");
+                flag = true;
                 while (timeDelta <= TimeSpan.Parse("23:00:00"))
                 {
                     Grid gridOne = new Grid();
@@ -163,7 +173,7 @@ namespace ProjectOffice.Pages
                         {
                             string colorHex = "";
 
-                            if (isCan && listTasks != null && listTasks.Contains(taskDays[i]))
+                            if (isCan && listTasks != null && !listTasks.Contains(taskDays[i]))
                             {
                                 colorHex = "#EDA0FA";
                             }
@@ -174,7 +184,7 @@ namespace ProjectOffice.Pages
 
                             if ((Int32)dateTime.DayOfWeek == 6 || (Int32)dateTime.DayOfWeek == 0)
                             {
-                                if (isCan && listTasks.Contains(taskDays[i]))
+                                if (isCan && !listTasks.Contains(taskDays[i]))
                                 {
                                     colorHex = "#AAE2E2";
                                 }
@@ -197,7 +207,12 @@ namespace ProjectOffice.Pages
                             }
                             else
                             {
-                                textBlock = new TextBlock() { Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString(colorHex)), DataContext = taskDays[i] };
+                                textBlock = new TextBlock()
+                                {
+                                    Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString(colorHex)),
+                                    DataContext = taskDays[i],
+                                    TextWrapping = TextWrapping.Wrap
+                                };
                             }
                             textBlock.MouseUp += new MouseButtonEventHandler(TextBlock_Cliek);
                             textBlock.MouseEnter += TextBlock_MouseEnter;
@@ -243,38 +258,63 @@ namespace ProjectOffice.Pages
                                 }
                                 gridOne.Children.Add(grid);
                                 Grid.SetColumn(grid, i);
-                                }
-                                else
-                                {
-                                    gridOne.Children.Add(textBlock);
-                                    Grid.SetColumn(textBlock, i);
-                                }
                             }
                             else
                             {
-                                textBlock = new TextBlock() { DataContext = taskDays[i] };
+                                gridOne.Children.Add(textBlock);
+                                Grid.SetColumn(textBlock, i);
                             }
                         }
-                        DataDate.Children.Add(gridOne);
-                        Grid.SetColumn(gridOne, DataDate.ColumnDefinitions.Count() - 1);
-                        Grid.SetRow(gridOne, timeDelta.Hours);
-                        timeDelta = timeDelta + TimeSpan.FromHours(1);
+                        else
+                        {
+                            textBlock = new TextBlock() { DataContext = taskDays[i] };
+                        }
                     }
-
-                    TextBlock textDate = new TextBlock()
+                    DataDate.Children.Add(gridOne);
+                    Grid.SetColumn(gridOne, DataDate.ColumnDefinitions.Count() - 1);
+                    if (timeDelta.Hours >= DateTime.Now.Hour + 1)
                     {
-                        Text = CultureInfo.CurrentCulture.DateTimeFormat.GetDayName(dateTime.DayOfWeek) + " " + dateTime.ToLongDateString(),
-                        TextWrapping = TextWrapping.Wrap,
-                        Background = Brushes.White
-                    };
-                    DataDate.Children.Add(textDate);
-                    Grid.SetRow(textDate, 24);
-                    Grid.SetColumn(textDate, DataDate.ColumnDefinitions.Count() - 1);
-                    dateTime = dateTime.AddDays(1);
+                        Grid.SetRow(gridOne, timeDelta.Hours + 1);
+                    }
+                    else
+                    {
+                        Grid.SetRow(gridOne, timeDelta.Hours);
+                    }
+                    timeDelta = timeDelta + TimeSpan.FromHours(1);
                 }
 
-                DateText.Text = DateStart.Day + "." + DateStart.Month + "." + DateStart.Year + " - " + DateEnd.Day + "." + DateEnd.Month + "." + DateEnd.Year;
+                TextBlock textDate = new TextBlock()
+                {
+                    Text = CultureInfo.CurrentCulture.DateTimeFormat.GetDayName(dateTime.DayOfWeek),
+                    TextWrapping = TextWrapping.Wrap,
+                    Background = Brushes.White
+                };
+                DataDate.Children.Add(textDate);
+                Grid.SetRow(textDate, 24);
+                Grid.SetColumn(textDate, DataDate.ColumnDefinitions.Count() - 1);
+                dateTime = dateTime.AddDays(1);
             }
+
+            for (int i = 1; i < DataDate.ColumnDefinitions.Count(); i++)
+            {
+                if (i == 1)
+                {
+                    TextBlock lineTime = new TextBlock() { Background = Brushes.LightBlue, Text = DateTime.Now.ToShortTimeString(), Foreground = Brushes.Gray };
+                    DataDate.Children.Add(lineTime);
+                    Grid.SetRow(lineTime, DateTime.Now.Hour + 1);
+                    Grid.SetColumn(lineTime, i);
+                }
+                else
+                {
+                    TextBlock lineTime = new TextBlock() { Background = Brushes.LightBlue, Foreground = Brushes.Gray };
+                    DataDate.Children.Add(lineTime);
+                    Grid.SetRow(lineTime, DateTime.Now.Hour + 1);
+                    Grid.SetColumn(lineTime, i);
+                }
+                flag = false;
+            }
+            DateText.Text = DateStart.Day + "." + DateStart.Month + "." + DateStart.Year + " - " + DateEnd.Day + "." + DateEnd.Month + "." + DateEnd.Year;
+        }
 
         private void TextBlock_MouseEnter(object sender, MouseEventArgs e)
         {
@@ -366,12 +406,44 @@ namespace ProjectOffice.Pages
             Refresh(false, null);
         }
 
-        private void ImportBtn_Click(object sender, RoutedEventArgs e)
+        private async void ImportBtn_Click(object sender, RoutedEventArgs e)
         {
+            var tasks = App.DB.Task.Where(x => x.ProjectId == App.project.Id).ToList();
+            foreach (var item in tasks)
+            {
+                App.DB.Task.Remove(item);
+            }
+            App.DB.SaveChanges();
+
             var dialog = new OpenFileDialog() { Filter= "*.xlsx; | *.xlsx;" };
             if (dialog.ShowDialog().GetValueOrDefault())
             {
-                MessageBox.Show("Import");
+                var file = dialog.FileName;
+                Microsoft.Office.Interop.Excel.Application excelApp = new Microsoft.Office.Interop.Excel.Application();
+                Workbook workbook = excelApp.Workbooks.Open(file);
+                Worksheet worksheet = workbook.Worksheets[1];
+                Range objects = worksheet.UsedRange;
+                int rows = objects.Rows.Count;
+                for (int row = 2; row <= rows; row++)
+                {
+                    var newTask = new Models.Task() { ProjectId=App.project.Id};
+                    newTask.ShortTitle = objects.Cells[row, 1].Value.ToString();
+                    newTask.Name = objects.Cells[row, 2].Value.ToString();
+                    string poisk = objects.Cells[row, 4].Value.ToString();
+                    newTask.PostanovchikId = App.DB.Employe.FirstOrDefault(x => x.Guid == poisk).Id;
+                    poisk = objects.Cells[row, 5].Value.ToString();
+                    newTask.IspolnitelId = App.DB.Employe.FirstOrDefault(x => x.Guid == poisk).Id;
+                    newTask.StatusId = Int32.Parse(objects.Cells[row, 7].Value.ToString());
+                    newTask.CreatedTime = DateTime.Parse(objects.Cells[row, 8].Value.ToString());
+                    newTask.UpdatedTime = DateTime.Parse(objects.Cells[row, 9].Value.ToString());
+                    newTask.StartActualTime = DateTime.Parse(objects.Cells[row, 11].Value.ToString());
+                    newTask.FinishActualTime = DateTime.Parse(objects.Cells[row, 12].Value.ToString());
+                    newTask.DateStart = DateTime.Parse(objects.Cells[row, 14].Value.ToString());
+                    newTask.DateEnd = DateTime.Parse(objects.Cells[row, 15].Value.ToString());
+                    App.DB.Task.Add(newTask);
+                    App.DB.SaveChanges();
+                }
+                Refresh(false, null);
             }
 
         }

@@ -9,6 +9,66 @@
       Title="OknoDash">
 
     <Grid>
-        <TextBlock FontSize="27" Text="Разработка" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock> 
+        <WrapPanel>
+            <Grid Width="250" Height="250" Background="LightGray" Margin="10,10,10,10" Name="GridEnd">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="150"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <TextBlock Name="KolZadach" FontSize="31" Grid.Row="0" HorizontalAlignment="Center"  VerticalAlignment="Center"></TextBlock>
+                <TextBlock Text="Задач выполнено за сегодня" FontSize="17" TextWrapping="Wrap" Grid.Row="1" Width="200"></TextBlock>
+            </Grid>
+            <Grid Width="250" Height="250" Background="LightGray" Margin="10,10,10,10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="150"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <TextBlock Name="KolLoseZadach"  FontSize="31" Grid.Row="0" HorizontalAlignment="Center"  VerticalAlignment="Center"></TextBlock>
+                <TextBlock Text="Количество не завершенных задач"  FontSize="17" TextWrapping="Wrap" Grid.Row="1" Width="200"></TextBlock>
+            </Grid>
+            <Grid Width="250" Height="250" Background="LightGray" Margin="10,10,10,10" Name="GridLosed">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="150"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <TextBlock Name="KolLosedZadach" FontSize="31" Grid.Row="0" HorizontalAlignment="Center"  VerticalAlignment="Center"></TextBlock>
+                <TextBlock Text="Количество просроченных задач" FontSize="17" TextWrapping="Wrap" Grid.Row="1" Width="200"></TextBlock>
+            </Grid>
+            <Grid Width="500" Height="250" Background="LightGray" Margin="10,10,10,10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <TextBlock Text="ТОП 5 Сотрудников по закрытым задачам в текущем месяце" FontSize="15" TextWrapping="Wrap" Grid.Row="0" Width="480"></TextBlock>
+                <DataGrid Name="DataUsersWin" AutoGenerateColumns="False" IsReadOnly="True" Grid.Row="1" FontSize="17">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ФИО" Binding="{Binding FullName}"></DataGridTextColumn>
+                        <DataGridTextColumn Header="Кол-во" Binding="{Binding KolWin}"></DataGridTextColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+            <Grid Width="500" Height="250" Background="LightGray" Margin="10,10,10,10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <TextBlock Text="ТОП 5 Сотрудников по просроченным задачам в текущем месяце" FontSize="15" TextWrapping="Wrap" Grid.Row="0" Width="480"></TextBlock>
+                <DataGrid Name="DataUsersLosed" AutoGenerateColumns="False" IsReadOnly="True" Grid.Row="1" FontSize="17">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ФИО" Binding="{Binding FullName}"></DataGridTextColumn>
+                        <DataGridTextColumn Header="Кол-во" Binding="{Binding KolLosed}"></DataGridTextColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+            <StackPanel Width="250" Height="250" Background="LightGray" Margin="10,10,10,10">
+                <TextBlock Text="Экспорт данных"  FontSize="17" TextWrapping="Wrap" Grid.Row="1" Width="200"></TextBlock>
+                <Button x:Name="AllTasksBtn"  Content="Все задачи" Click="AllTasksBtn_Click" FontSize="17" Background="LightGray"></Button>
+                <Button x:Name="AllUsers"  Content="Все сотрудники" Click="AllUsers_Click" FontSize="17" Background="LightGray"></Button>
+                <Button x:Name="AllWinTasks"  Content="Закрытые задачи" Click="AllWinTasks_Click"  FontSize="17" Background="LightGray"></Button>
+                <Button x:Name="AllWillTasks"  Content="Открытые задачи" Click="AllWillTasks_Click"  FontSize="17" Background="LightGray"></Button>
+                <Button x:Name="AllLastTasks"  Content="Последние задачи" Click="AllLastTasks_Click"  FontSize="17" Background="LightGray"></Button>
+            </StackPanel>
+            <Grid Name="DataGrid" Width="500" Height="250" Background="LightGray" Margin="10,10,10,10"></Grid>
+        </WrapPanel>
     </Grid>
 </Page>
