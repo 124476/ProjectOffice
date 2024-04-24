@@ -4,11 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Xml.Serialization;
 
 namespace ProjectOffice.Models
 {
     public partial class Task
     {
+        [XmlIgnore]
         public string EmployeeIspolName
         {
             get
@@ -17,6 +19,7 @@ namespace ProjectOffice.Models
                 return employe.First_name + " " + employe.Last_name[0] + ". " + employe.Middle_name[0] + ".";
             }
         }
+        [XmlIgnore]
 
         public string BackColor
         {
@@ -30,6 +33,7 @@ namespace ProjectOffice.Models
             }
         }
 
+        [XmlIgnore]
         public string LastTask
         {
             get
@@ -45,6 +49,7 @@ namespace ProjectOffice.Models
                 }
             }
         }
+        [XmlIgnore]
 
         public Employe Ispol
         {

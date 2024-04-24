@@ -1,6 +1,8 @@
 ﻿using Microsoft.Win32;
 using Newtonsoft.Json;
 using ProjectOffice.Models;
+using ProjectOffice.Models.SerializableModels;
+using ProjectOffice.Properties;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -18,6 +20,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 using System.Xml.Serialization;
 
 namespace ProjectOffice.Pages
@@ -28,9 +31,42 @@ namespace ProjectOffice.Pages
     public partial class OknoDash : Page
     {
         List<Employe> employesList;
+        
+        DispatcherTimer dispatcherTimer;
+        Grid gridLocaly;
         public OknoDash()
         {
             InitializeComponent();
+            Refresh();
+
+            var indexs = Settings.Default.DataWrapPanel.Split(';');
+
+            if (indexs != null)
+            {
+                MainPanel.Children.Remove(GridEnd);
+                MainPanel.Children.Insert(Int32.Parse(indexs[0]), GridEnd);
+                MainPanel.Children.Remove(GridTwo);
+                MainPanel.Children.Insert(Int32.Parse(indexs[1]), GridTwo);
+                MainPanel.Children.Remove(GridLosed);
+                MainPanel.Children.Insert(Int32.Parse(indexs[2]), GridLosed);
+                MainPanel.Children.Remove(GridFour);
+                MainPanel.Children.Insert(Int32.Parse(indexs[3]), GridFour);
+                MainPanel.Children.Remove(GridFive);
+                MainPanel.Children.Insert(Int32.Parse(indexs[4]), GridFive);
+                MainPanel.Children.Remove(GridSix);
+                MainPanel.Children.Insert(Int32.Parse(indexs[5]), GridSix);
+                MainPanel.Children.Remove(GridSeven);
+                MainPanel.Children.Insert(Int32.Parse(indexs[6]), GridSeven);
+            }
+
+            dispatcherTimer = new DispatcherTimer();
+            dispatcherTimer.Tick += DispatcherTimer_Tick;
+            dispatcherTimer.Interval = TimeSpan.FromSeconds(30);
+            dispatcherTimer.Start();
+        }
+
+        private void DispatcherTimer_Tick(object sender, EventArgs e)
+        {
             Refresh();
         }
 
@@ -185,13 +221,22 @@ namespace ProjectOffice.Pages
             if (dialog.ShowDialog().GetValueOrDefault())
             {
                 var file = File.Create(dialog.FileName);
-                file.Close();
 
                 var dateNow = DateTime.Now;
                 var datePoisk = dateNow.AddMonths(-1);
 
-                var tasks = App.DB.Task.Where(x => x.ProjectId == App.project.Id && dateNow >= x.DateEnd && datePoisk <= x.DateEnd).ToList();
+                var tasks = App.DB.Task.Where(x => x.ProjectId == App.project.Id && dateNow >= x.DateEnd && datePoisk <= x.DateEnd).Select(x => new XMLSerializableTask
+                {
+                    Id = x.Id,
+                    Name = x.Name,
+                    ShortTitle = x.ShortTitle,
+                    Status = x.TaskStatus.Name,
+                }).ToList();
 
+                XmlSerializer serializer = new XmlSerializer(tasks.GetType());
+
+                serializer.Serialize(file, tasks);
+                file.Close();
             }
         }
 
@@ -239,6 +284,41 @@ namespace ProjectOffice.Pages
 
                 File.WriteAllText(dialog.FileName, text);
             }
+        }
+
+        private void Page_Unloaded(object sender, RoutedEventArgs e)
+        {
+            dispatcherTimer.Stop();
+        }
+
+        private void GridEnd_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            Grid grid = sender as Grid;
+            if (grid != null)
+            {
+                gridLocaly = grid;
+                DragDrop.DoDragDrop(grid, "", DragDropEffects.Copy);
+            }
+        }
+
+        private void GridEnd_Drop(object sender, DragEventArgs e)
+        {
+            if (MainPanel.Children.IndexOf(sender as Grid) != MainPanel.Children.IndexOf(gridLocaly))
+            {
+                int iindex = MainPanel.Children.IndexOf(sender as Grid);
+                MainPanel.Children.Remove(gridLocaly);
+                MainPanel.Children.Insert(iindex, gridLocaly);
+            }
+
+
+            Settings.Default.DataWrapPanel = MainPanel.Children.IndexOf(GridEnd).ToString() + ";" +
+                  MainPanel.Children.IndexOf(GridTwo).ToString() + ";" +
+                  MainPanel.Children.IndexOf(GridLosed).ToString() + ";" +
+                  MainPanel.Children.IndexOf(GridFour).ToString() + ";" +
+                  MainPanel.Children.IndexOf(GridFive).ToString() + ";" +
+                  MainPanel.Children.IndexOf(GridSix).ToString() + ";" +
+                  MainPanel.Children.IndexOf(GridSeven).ToString();
+            Settings.Default.Save();
         }
     }
 }

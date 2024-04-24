@@ -11,7 +11,8 @@ namespace ProjectOffice.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Xml.Serialization;
+
     public partial class Task
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -23,32 +24,55 @@ namespace ProjectOffice.Models
         }
     
         public int Id { get; set; }
+        [XmlIgnore]
         public Nullable<int> ProjectId { get; set; }
+        [XmlIgnore]
         public string ShortTitle { get; set; }
+        [XmlIgnore]
         public string Name { get; set; }
+        [XmlIgnore]
         public string Descriprion { get; set; }
+        [XmlIgnore]
         public Nullable<int> PostanovchikId { get; set; }
+        [XmlIgnore]
         public Nullable<int> IspolnitelId { get; set; }
         public Nullable<int> StatusId { get; set; }
+        [XmlIgnore]
         public Nullable<System.DateTime> CreatedTime { get; set; }
+        [XmlIgnore]
         public Nullable<System.DateTime> UpdatedTime { get; set; }
+        [XmlIgnore]
         public Nullable<System.DateTime> DelectedTime { get; set; }
+        [XmlIgnore]
         public Nullable<System.DateTime> StartActualTime { get; set; }
+        [XmlIgnore]
         public Nullable<System.DateTime> FinishActualTime { get; set; }
+        [XmlIgnore]
         public Nullable<int> PreviousTaskId { get; set; }
+        [XmlIgnore]
         public Nullable<System.DateTime> DateStart { get; set; }
+        [XmlIgnore]
         public Nullable<System.DateTime> DateEnd { get; set; }
+        [XmlIgnore]
         public Nullable<int> PortfileId { get; set; }
+        [XmlIgnore]
         public Nullable<bool> IsDelete { get; set; }
-    
+
+        [XmlIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DocumentFile> DocumentFile { get; set; }
+        [XmlIgnore]
         public virtual Employe Employe { get; set; }
+        [XmlIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<LastStatus> LastStatus { get; set; }
+        [XmlIgnore]
         public virtual Portfile Portfile { get; set; }
+        [XmlIgnore]
         public virtual Project Project { get; set; }
+        [XmlIgnore]
         public virtual TaskStatus TaskStatus { get; set; }
+        [XmlIgnore]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Wather> Wather { get; set; }
     }

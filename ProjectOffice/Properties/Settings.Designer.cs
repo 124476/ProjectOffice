@@ -70,5 +70,17 @@ namespace ProjectOffice.Properties {
                 this["delta"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0;1;2;3;4;5;6")]
+        public string DataWrapPanel {
+            get {
+                return ((string)(this["DataWrapPanel"]));
+            }
+            set {
+                this["DataWrapPanel"] = value;
+            }
+        }
     }
 }

@@ -3,7 +3,70 @@
   "WorkspaceRootPath": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|c:\\users\\stipo6\\source\\repos\\projectoffice\\projectoffice\\pages\\oknotask.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|c:\\users\\stipo6\\source\\repos\\projectoffice\\projectoffice\\pages\\oknodash.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|solutionrelative:projectoffice\\pages\\oknodash.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|c:\\users\\stipo6\\source\\repos\\projectoffice\\projectoffice\\pages\\oknodash.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|solutionrelative:projectoffice\\pages\\oknodash.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\projectoffice\\pages\\pagehistory.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|solutionrelative:projectoffice\\pages\\pagehistory.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\projectoffice\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|solutionrelative:projectoffice\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\projectoffice\\models\\projestofficedatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|solutionrelative:projectoffice\\models\\projestofficedatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\projectoffice\\models\\projestofficedatabase.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|solutionrelative:projectoffice\\models\\projestofficedatabase.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|ProjectOffice||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\projectoffice\\windows\\oknoinfotask.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|solutionrelative:projectoffice\\windows\\oknoinfotask.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\projectoffice\\models\\projestofficedatabase.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|solutionrelative:projectoffice\\models\\projestofficedatabase.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\projectoffice\\pages\\oknocal.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|solutionrelative:projectoffice\\pages\\oknocal.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\projectoffice\\models\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|solutionrelative:projectoffice\\models\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\projectoffice\\models\\sysdiagrams.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|solutionrelative:projectoffice\\models\\sysdiagrams.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\projectoffice\\models\\partials\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|solutionrelative:projectoffice\\models\\partials\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\projectoffice\\pages\\oknocal.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|solutionrelative:projectoffice\\pages\\oknocal.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\projectoffice\\pages\\oknotask.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|solutionrelative:projectoffice\\pages\\oknotask.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\projectoffice\\models\\serializablemodels\\xmlserializabletask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|solutionrelative:projectoffice\\models\\serializablemodels\\xmlserializabletask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\projectoffice\\pages\\oknotask.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|solutionrelative:projectoffice\\pages\\oknotask.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
@@ -15,60 +78,12 @@
       "RelativeMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|solutionrelative:projectoffice\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\projectoffice\\pages\\oknotask.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|solutionrelative:projectoffice\\pages\\oknotask.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\projectoffice\\pages\\oknocal.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|solutionrelative:projectoffice\\pages\\oknocal.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\projectoffice\\pages\\oknodash.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|solutionrelative:projectoffice\\pages\\oknodash.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\projectoffice\\windows\\oknoinfotask.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|solutionrelative:projectoffice\\windows\\oknoinfotask.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\projectoffice\\windows\\oknoinfotask.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|solutionrelative:projectoffice\\windows\\oknoinfotask.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\projectoffice\\pages\\pagehistory.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|solutionrelative:projectoffice\\pages\\pagehistory.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\projectoffice\\models\\projestofficedatabase.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
-      "RelativeMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|solutionrelative:projectoffice\\models\\projestofficedatabase.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\projectoffice\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|solutionrelative:projectoffice\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\projectoffice\\pages\\oknodash.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|solutionrelative:projectoffice\\pages\\oknodash.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\projectoffice\\models\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|solutionrelative:projectoffice\\models\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\projectoffice\\models\\sysdiagrams.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|solutionrelative:projectoffice\\models\\sysdiagrams.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\projectoffice\\models\\projestofficedatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|solutionrelative:projectoffice\\models\\projestofficedatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\projectoffice\\models\\projestofficedatabase.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|solutionrelative:projectoffice\\models\\projestofficedatabase.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\projectoffice\\pages\\oknocal.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|solutionrelative:projectoffice\\pages\\oknocal.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|c:\\users\\stipo6\\source\\repos\\projectoffice\\projectoffice\\properties\\settings.settings||{6D2695F9-5365-4A78-89ED-F205C045BFE6}",
+      "RelativeMoniker": "D:0:0:{4D58D44B-A318-4ED8-97BC-7D7038E37BBE}|ProjectOffice\\ProjectOffice.csproj|solutionrelative:projectoffice\\properties\\settings.settings||{6D2695F9-5365-4A78-89ED-F205C045BFE6}"
     }
   ],
   "DocumentGroupContainers": [
@@ -78,22 +93,113 @@
       "DocumentGroups": [
         {
           "DockedHeight": 369,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "OknoInfoTask.xaml",
-              "DocumentMoniker": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Windows\\OknoInfoTask.xaml",
-              "RelativeDocumentMoniker": "ProjectOffice\\Windows\\OknoInfoTask.xaml",
-              "ToolTip": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Windows\\OknoInfoTask.xaml",
-              "RelativeToolTip": "ProjectOffice\\Windows\\OknoInfoTask.xaml",
+              "DocumentIndex": 1,
+              "Title": "OknoDash.xaml",
+              "DocumentMoniker": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Pages\\OknoDash.xaml",
+              "RelativeDocumentMoniker": "ProjectOffice\\Pages\\OknoDash.xaml",
+              "ToolTip": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Pages\\OknoDash.xaml",
+              "RelativeToolTip": "ProjectOffice\\Pages\\OknoDash.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-22T15:05:38.39Z"
+              "WhenOpened": "2024-04-24T16:09:57.564Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 0,
+              "Title": "OknoDash.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Pages\\OknoDash.xaml.cs",
+              "RelativeDocumentMoniker": "ProjectOffice\\Pages\\OknoDash.xaml.cs",
+              "ToolTip": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Pages\\OknoDash.xaml.cs",
+              "RelativeToolTip": "ProjectOffice\\Pages\\OknoDash.xaml.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAAEEBAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T13:51:53.178Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "OknoCal.xaml",
+              "DocumentMoniker": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Pages\\OknoCal.xaml",
+              "RelativeDocumentMoniker": "ProjectOffice\\Pages\\OknoCal.xaml",
+              "ToolTip": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Pages\\OknoCal.xaml",
+              "RelativeToolTip": "ProjectOffice\\Pages\\OknoCal.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-22T15:12:15.171Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "OknoCal.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Pages\\OknoCal.xaml.cs",
+              "RelativeDocumentMoniker": "ProjectOffice\\Pages\\OknoCal.xaml.cs",
+              "ToolTip": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Pages\\OknoCal.xaml.cs",
+              "RelativeToolTip": "ProjectOffice\\Pages\\OknoCal.xaml.cs",
+              "ViewState": "AQIAAKAAAAAAAAAAAAAAAKwAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T13:20:15.624Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "OknoInfoTask.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Windows\\OknoInfoTask.xaml.cs",
+              "RelativeDocumentMoniker": "ProjectOffice\\Windows\\OknoInfoTask.xaml.cs",
+              "ToolTip": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Windows\\OknoInfoTask.xaml.cs",
+              "RelativeToolTip": "ProjectOffice\\Windows\\OknoInfoTask.xaml.cs",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAgwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T15:05:38.89Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProjestOfficeDatabase.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Models\\ProjestOfficeDatabase.Designer.cs",
+              "RelativeDocumentMoniker": "ProjectOffice\\Models\\ProjestOfficeDatabase.Designer.cs",
+              "ToolTip": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Models\\ProjestOfficeDatabase.Designer.cs",
+              "RelativeToolTip": "ProjectOffice\\Models\\ProjestOfficeDatabase.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T14:04:14.869Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProjestOfficeDatabase.cs",
+              "DocumentMoniker": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Models\\ProjestOfficeDatabase.cs",
+              "RelativeDocumentMoniker": "ProjectOffice\\Models\\ProjestOfficeDatabase.cs",
+              "ToolTip": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Models\\ProjestOfficeDatabase.cs",
+              "RelativeToolTip": "ProjectOffice\\Models\\ProjestOfficeDatabase.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T14:04:19.852Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Properties\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "ProjectOffice\\Properties\\AssemblyInfo.cs",
+              "ToolTip": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Properties\\AssemblyInfo.cs",
+              "RelativeToolTip": "ProjectOffice\\Properties\\AssemblyInfo.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAADUAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T13:19:03.761Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "PageHistory.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Pages\\PageHistory.xaml.cs",
               "RelativeDocumentMoniker": "ProjectOffice\\Pages\\PageHistory.xaml.cs",
@@ -101,80 +207,12 @@
               "RelativeToolTip": "ProjectOffice\\Pages\\PageHistory.xaml.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T15:05:37.25Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ProjestOfficeDatabase.edmx [Diagram1]",
-              "DocumentMoniker": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Models\\ProjestOfficeDatabase.edmx",
-              "RelativeDocumentMoniker": "ProjectOffice\\Models\\ProjestOfficeDatabase.edmx",
-              "ToolTip": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Models\\ProjestOfficeDatabase.edmx [Diagram1]",
-              "RelativeToolTip": "ProjectOffice\\Models\\ProjestOfficeDatabase.edmx [Diagram1]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
-              "WhenOpened": "2024-04-22T13:57:27.156Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Task.cs",
-              "DocumentMoniker": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Models\\Task.cs",
-              "RelativeDocumentMoniker": "ProjectOffice\\Models\\Task.cs",
-              "ToolTip": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Models\\Task.cs",
-              "RelativeToolTip": "ProjectOffice\\Models\\Task.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAA8wDEAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T13:54:28.208Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "OknoDash.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Pages\\OknoDash.xaml.cs",
-              "RelativeDocumentMoniker": "ProjectOffice\\Pages\\OknoDash.xaml.cs",
-              "ToolTip": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Pages\\OknoDash.xaml.cs",
-              "RelativeToolTip": "ProjectOffice\\Pages\\OknoDash.xaml.cs",
-              "ViewState": "AQIAAK8AAAAAAAAAAADwv8EAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T13:51:53.178Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "OknoDash.xaml",
-              "DocumentMoniker": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Pages\\OknoDash.xaml",
-              "RelativeDocumentMoniker": "ProjectOffice\\Pages\\OknoDash.xaml",
-              "ToolTip": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Pages\\OknoDash.xaml",
-              "RelativeToolTip": "ProjectOffice\\Pages\\OknoDash.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-22T13:51:52.538Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "OknoTask.xaml",
-              "DocumentMoniker": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Pages\\OknoTask.xaml",
-              "RelativeDocumentMoniker": "ProjectOffice\\Pages\\OknoTask.xaml",
-              "ToolTip": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Pages\\OknoTask.xaml",
-              "RelativeToolTip": "ProjectOffice\\Pages\\OknoTask.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-22T13:21:48.926Z",
+              "WhenOpened": "2024-04-22T15:05:37.25Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "ProjectOffice\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\MainWindow.xaml",
-              "RelativeToolTip": "ProjectOffice\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-22T13:35:36.126Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 14,
               "Title": "OknoTask.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Pages\\OknoTask.xaml.cs",
               "RelativeDocumentMoniker": "ProjectOffice\\Pages\\OknoTask.xaml.cs",
@@ -186,78 +224,65 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "ProjectOffice\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\MainWindow.xaml.cs",
-              "RelativeToolTip": "ProjectOffice\\MainWindow.xaml.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAACIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T13:30:57.401Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "OknoInfoTask.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Windows\\OknoInfoTask.xaml.cs",
-              "RelativeDocumentMoniker": "ProjectOffice\\Windows\\OknoInfoTask.xaml.cs",
-              "ToolTip": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Windows\\OknoInfoTask.xaml.cs",
-              "RelativeToolTip": "ProjectOffice\\Windows\\OknoInfoTask.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T15:05:38.89Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "OknoCal.xaml",
-              "DocumentMoniker": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Pages\\OknoCal.xaml",
-              "RelativeDocumentMoniker": "ProjectOffice\\Pages\\OknoCal.xaml",
-              "ToolTip": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Pages\\OknoCal.xaml",
-              "RelativeToolTip": "ProjectOffice\\Pages\\OknoCal.xaml",
+              "DocumentIndex": 17,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "ProjectOffice\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\MainWindow.xaml",
+              "RelativeToolTip": "ProjectOffice\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-22T15:12:15.171Z"
+              "WhenOpened": "2024-04-22T13:35:36.126Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ProjestOfficeDatabase.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Models\\ProjestOfficeDatabase.Designer.cs",
-              "RelativeDocumentMoniker": "ProjectOffice\\Models\\ProjestOfficeDatabase.Designer.cs",
-              "ToolTip": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Models\\ProjestOfficeDatabase.Designer.cs",
-              "RelativeToolTip": "ProjectOffice\\Models\\ProjestOfficeDatabase.Designer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T14:04:14.869Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ProjestOfficeDatabase.cs",
-              "DocumentMoniker": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Models\\ProjestOfficeDatabase.cs",
-              "RelativeDocumentMoniker": "ProjectOffice\\Models\\ProjestOfficeDatabase.cs",
-              "ToolTip": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Models\\ProjestOfficeDatabase.cs",
-              "RelativeToolTip": "ProjectOffice\\Models\\ProjestOfficeDatabase.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T14:04:19.852Z"
+              "DocumentIndex": 16,
+              "Title": "OknoTask.xaml",
+              "DocumentMoniker": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Pages\\OknoTask.xaml",
+              "RelativeDocumentMoniker": "ProjectOffice\\Pages\\OknoTask.xaml",
+              "ToolTip": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Pages\\OknoTask.xaml",
+              "RelativeToolTip": "ProjectOffice\\Pages\\OknoTask.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-22T13:21:48.926Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "AssemblyInfo.cs",
-              "DocumentMoniker": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Properties\\AssemblyInfo.cs",
-              "RelativeDocumentMoniker": "ProjectOffice\\Properties\\AssemblyInfo.cs",
-              "ToolTip": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Properties\\AssemblyInfo.cs",
-              "RelativeToolTip": "ProjectOffice\\Properties\\AssemblyInfo.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAAADUAAAAkAAAA",
+              "Title": "Task.cs",
+              "DocumentMoniker": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Models\\Task.cs",
+              "RelativeDocumentMoniker": "ProjectOffice\\Models\\Task.cs",
+              "ToolTip": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Models\\Task.cs",
+              "RelativeToolTip": "ProjectOffice\\Models\\Task.cs",
+              "ViewState": "AQIAADkAAAAAAAAAAAAgwE0AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T13:19:03.761Z"
+              "WhenOpened": "2024-04-22T13:54:28.208Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 6,
+              "Title": "ProjectOffice",
+              "DocumentMoniker": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\ProjectOffice.csproj",
+              "RelativeDocumentMoniker": "ProjectOffice\\ProjectOffice.csproj",
+              "ToolTip": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\ProjectOffice.csproj",
+              "RelativeToolTip": "ProjectOffice\\ProjectOffice.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-04-24T14:59:45.047Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ProjestOfficeDatabase.edmx [Diagram1]",
+              "DocumentMoniker": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Models\\ProjestOfficeDatabase.edmx",
+              "RelativeDocumentMoniker": "ProjectOffice\\Models\\ProjestOfficeDatabase.edmx",
+              "ToolTip": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Models\\ProjestOfficeDatabase.edmx [Diagram1]",
+              "RelativeToolTip": "ProjectOffice\\Models\\ProjestOfficeDatabase.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2024-04-22T13:57:27.156Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "sysdiagrams.cs",
               "DocumentMoniker": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Models\\sysdiagrams.cs",
               "RelativeDocumentMoniker": "ProjectOffice\\Models\\sysdiagrams.cs",
@@ -269,15 +294,50 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "OknoCal.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Pages\\OknoCal.xaml.cs",
-              "RelativeDocumentMoniker": "ProjectOffice\\Pages\\OknoCal.xaml.cs",
-              "ToolTip": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Pages\\OknoCal.xaml.cs",
-              "RelativeToolTip": "ProjectOffice\\Pages\\OknoCal.xaml.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAQwEIAAAAYAAAA",
+              "DocumentIndex": 12,
+              "Title": "Task.cs",
+              "DocumentMoniker": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Models\\Partials\\Task.cs",
+              "RelativeDocumentMoniker": "ProjectOffice\\Models\\Partials\\Task.cs",
+              "ToolTip": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Models\\Partials\\Task.cs",
+              "RelativeToolTip": "ProjectOffice\\Models\\Partials\\Task.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAQwDQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T13:20:15.624Z"
+              "WhenOpened": "2024-04-23T13:50:34.391Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "OknoInfoTask.xaml",
+              "DocumentMoniker": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Windows\\OknoInfoTask.xaml",
+              "RelativeDocumentMoniker": "ProjectOffice\\Windows\\OknoInfoTask.xaml",
+              "ToolTip": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Windows\\OknoInfoTask.xaml",
+              "RelativeToolTip": "ProjectOffice\\Windows\\OknoInfoTask.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-22T15:05:38.39Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "XMLSerializableTask.cs",
+              "DocumentMoniker": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Models\\SerializableModels\\XMLSerializableTask.cs",
+              "RelativeDocumentMoniker": "ProjectOffice\\Models\\SerializableModels\\XMLSerializableTask.cs",
+              "ToolTip": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\Models\\SerializableModels\\XMLSerializableTask.cs",
+              "RelativeToolTip": "ProjectOffice\\Models\\SerializableModels\\XMLSerializableTask.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T15:35:10.42Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "ProjectOffice\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Stipo6\\source\\repos\\ProjectOffice\\ProjectOffice\\MainWindow.xaml.cs",
+              "RelativeToolTip": "ProjectOffice\\MainWindow.xaml.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAACIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T13:30:57.401Z"
             }
           ]
         }

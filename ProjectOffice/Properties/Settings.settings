@@ -14,5 +14,8 @@
     <Setting Name="delta" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">5</Value>
     </Setting>
+    <Setting Name="DataWrapPanel" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0;1;2;3;4;5;6</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -71,6 +71,7 @@
       <DependentUpon>ProjestOfficeDatabase.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Partials\Employe.cs" />
+    <Compile Include="Models\SerializableModels\XMLSerializableTask.cs" />
     <Compile Include="Models\Wather.cs">
       <DependentUpon>ProjestOfficeDatabase.tt</DependentUpon>
     </Compile>

@@ -6,11 +6,13 @@
       xmlns:local="clr-namespace:ProjectOffice.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="OknoDash">
+      Title="OknoDash"
+      Unloaded="Page_Unloaded">
 
     <Grid>
-        <WrapPanel>
-            <Grid Width="250" Height="250" Background="LightGray" Margin="10,10,10,10" Name="GridEnd">
+        <WrapPanel Name="MainPanel">
+            <Grid Width="250" Height="250" Background="LightGray" Margin="10,10,10,10" Name="GridEnd"
+                  AllowDrop="True" Drop="GridEnd_Drop" MouseLeftButtonDown="GridEnd_MouseLeftButtonDown">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="150"></RowDefinition>
                     <RowDefinition></RowDefinition>
@@ -18,7 +20,8 @@
                 <TextBlock Name="KolZadach" FontSize="31" Grid.Row="0" HorizontalAlignment="Center"  VerticalAlignment="Center"></TextBlock>
                 <TextBlock Text="Задач выполнено за сегодня" FontSize="17" TextWrapping="Wrap" Grid.Row="1" Width="200"></TextBlock>
             </Grid>
-            <Grid Width="250" Height="250" Background="LightGray" Margin="10,10,10,10">
+            <Grid Width="250" Height="250" Background="LightGray" Margin="10,10,10,10" Name="GridTwo"
+                  AllowDrop="True" Drop="GridEnd_Drop" MouseLeftButtonDown="GridEnd_MouseLeftButtonDown">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="150"></RowDefinition>
                     <RowDefinition></RowDefinition>
@@ -26,7 +29,8 @@
                 <TextBlock Name="KolLoseZadach"  FontSize="31" Grid.Row="0" HorizontalAlignment="Center"  VerticalAlignment="Center"></TextBlock>
                 <TextBlock Text="Количество не завершенных задач"  FontSize="17" TextWrapping="Wrap" Grid.Row="1" Width="200"></TextBlock>
             </Grid>
-            <Grid Width="250" Height="250" Background="LightGray" Margin="10,10,10,10" Name="GridLosed">
+            <Grid Width="250" Height="250" Background="LightGray" Margin="10,10,10,10" Name="GridLosed"
+                  AllowDrop="True" Drop="GridEnd_Drop" MouseLeftButtonDown="GridEnd_MouseLeftButtonDown">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="150"></RowDefinition>
                     <RowDefinition></RowDefinition>
@@ -34,7 +38,8 @@
                 <TextBlock Name="KolLosedZadach" FontSize="31" Grid.Row="0" HorizontalAlignment="Center"  VerticalAlignment="Center"></TextBlock>
                 <TextBlock Text="Количество просроченных задач" FontSize="17" TextWrapping="Wrap" Grid.Row="1" Width="200"></TextBlock>
             </Grid>
-            <Grid Width="500" Height="250" Background="LightGray" Margin="10,10,10,10">
+            <Grid Width="500" Height="250" Background="LightGray" Margin="10,10,10,10" Name="GridFour"
+                  AllowDrop="True" Drop="GridEnd_Drop" MouseLeftButtonDown="GridEnd_MouseLeftButtonDown">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto"></RowDefinition>
                     <RowDefinition></RowDefinition>
@@ -47,7 +52,8 @@
                     </DataGrid.Columns>
                 </DataGrid>
             </Grid>
-            <Grid Width="500" Height="250" Background="LightGray" Margin="10,10,10,10">
+            <Grid Width="500" Height="250" Background="LightGray" Margin="10,10,10,10" Name="GridFive"
+                  AllowDrop="True" Drop="GridEnd_Drop" MouseLeftButtonDown="GridEnd_MouseLeftButtonDown">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto"></RowDefinition>
                     <RowDefinition></RowDefinition>
@@ -60,18 +66,22 @@
                     </DataGrid.Columns>
                 </DataGrid>
             </Grid>
-            <StackPanel Width="250" Height="250" Background="LightGray" Margin="10,10,10,10">
-                <TextBlock Text="Экспорт данных"  FontSize="17" TextWrapping="Wrap" Grid.Row="1" Width="200"></TextBlock>
-                <Button x:Name="AllTasksBtn"  Content="Все задачи" Click="AllTasksBtn_Click" FontSize="17" Background="LightGray"></Button>
-                <Button x:Name="AllUsers"  Content="Все сотрудники" Click="AllUsers_Click" FontSize="17" Background="LightGray"></Button>
-                <Button x:Name="AllWinTasks"  Content="Закрытые задачи" Click="AllWinTasks_Click"  FontSize="17" Background="LightGray"></Button>
-                <Button x:Name="AllWillTasks"  Content="Открытые задачи" Click="AllWillTasks_Click"  FontSize="17" Background="LightGray"></Button>
-                <Button x:Name="AllLastTasks"  Content="Последние задачи" Click="AllLastTasks_Click"  FontSize="17" Background="LightGray"></Button>
-            </StackPanel>
-            <StackPanel Background="LightGray" Margin="10,10,10,10">
-                <TextBlock Text="Тепловая диаграмма" FontSize="17" Margin="10,0"></TextBlock>
-                <Grid Name="DataGrid" Width="500" Height="250" Margin="10,10"></Grid>
-            </StackPanel>
+            <Grid AllowDrop="True" Drop="GridEnd_Drop" MouseLeftButtonDown="GridEnd_MouseLeftButtonDown" Name="GridSix" Height="250">
+                <StackPanel Background="LightGray" Margin="10,10,10,10" Width="250">
+                    <TextBlock Text="Экспорт данных"  FontSize="17" TextWrapping="Wrap" Grid.Row="1" Width="200"></TextBlock>
+                    <Button x:Name="AllTasksBtn"  Content="Все задачи" Click="AllTasksBtn_Click" FontSize="17" Background="LightGray"></Button>
+                    <Button x:Name="AllUsers"  Content="Все сотрудники" Click="AllUsers_Click" FontSize="17" Background="LightGray"></Button>
+                    <Button x:Name="AllWinTasks"  Content="Закрытые задачи" Click="AllWinTasks_Click"  FontSize="17" Background="LightGray"></Button>
+                    <Button x:Name="AllWillTasks"  Content="Открытые задачи" Click="AllWillTasks_Click"  FontSize="17" Background="LightGray"></Button>
+                    <Button x:Name="AllLastTasks"  Content="Последние задачи" Click="AllLastTasks_Click"  FontSize="17" Background="LightGray"></Button>
+                </StackPanel>
+            </Grid>
+            <Grid AllowDrop="True"  Drop="GridEnd_Drop" MouseLeftButtonDown="GridEnd_MouseLeftButtonDown" Name="GridSeven" Height="250">
+                <StackPanel Background="LightGray" Margin="10,10,10,10">
+                    <TextBlock Text="Тепловая диаграмма" FontSize="17" Margin="10,0"></TextBlock>
+                    <Grid Name="DataGrid" Width="500" Margin="10,10"></Grid>
+                </StackPanel>
+            </Grid>
         </WrapPanel>
     </Grid>
 </Page>
