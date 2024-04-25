@@ -1,0 +1,6 @@
+C:\Users\Stipo6\source\repos\WorkingTimeEfficiency\WorkingTimeEfficiency\bin\Debug\WorkingTimeEfficiency.dll
+C:\Users\Stipo6\source\repos\WorkingTimeEfficiency\WorkingTimeEfficiency\bin\Debug\WorkingTimeEfficiency.pdb
+C:\Users\Stipo6\source\repos\WorkingTimeEfficiency\WorkingTimeEfficiency\obj\Debug\WorkingTimeEfficiency.csproj.AssemblyReference.cache
+C:\Users\Stipo6\source\repos\WorkingTimeEfficiency\WorkingTimeEfficiency\obj\Debug\WorkingTimeEfficiency.csproj.CoreCompileInputs.cache
+C:\Users\Stipo6\source\repos\WorkingTimeEfficiency\WorkingTimeEfficiency\obj\Debug\WorkingTimeEfficiency.dll
+C:\Users\Stipo6\source\repos\WorkingTimeEfficiency\WorkingTimeEfficiency\obj\Debug\WorkingTimeEfficiency.pdb

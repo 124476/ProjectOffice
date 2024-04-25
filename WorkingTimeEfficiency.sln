@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34723.18
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingTimeEfficiency", "WorkingTimeEfficiency\WorkingTimeEfficiency.csproj", "{0FACAD7A-F1C1-45B9-B0A8-32203DE7EAC5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject", "UnitTestProject\UnitTestProject.csproj", "{133CA30D-AC80-4E18-9B9B-0DCE3052661F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0FACAD7A-F1C1-45B9-B0A8-32203DE7EAC5} = {0FACAD7A-F1C1-45B9-B0A8-32203DE7EAC5}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0FACAD7A-F1C1-45B9-B0A8-32203DE7EAC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FACAD7A-F1C1-45B9-B0A8-32203DE7EAC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FACAD7A-F1C1-45B9-B0A8-32203DE7EAC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FACAD7A-F1C1-45B9-B0A8-32203DE7EAC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{133CA30D-AC80-4E18-9B9B-0DCE3052661F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{133CA30D-AC80-4E18-9B9B-0DCE3052661F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{133CA30D-AC80-4E18-9B9B-0DCE3052661F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{133CA30D-AC80-4E18-9B9B-0DCE3052661F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1121D117-CD21-4EA4-B882-B0E2AFCEA98C}
+	EndGlobalSection
+EndGlobal
